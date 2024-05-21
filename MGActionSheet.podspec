@@ -1,0 +1,41 @@
+#
+# Be sure to run `pod lib lint MGActionSheet.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
+#
+
+Pod::Spec.new do |s|
+  s.name             = 'MGActionSheet'
+  s.version          = '0.1.0'
+  s.summary          = 'MGActionSheet. 一款仿微信底部弹框，支持高度自定义'
+
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
+  s.description      = <<-DESC
+                        MGActionSheet. 一款仿微信底部弹框，支持高度自定义
+
+  s.homepage         = 'https://github.com/xiaomage1478/MGActionSheet'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { '小马哥' => '354938940@qq.com' }
+  s.source           = { :git => 'https://github.com/xiaomage1478/MGActionSheet.git', :branch => 'main' }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
+  s.ios.deployment_target = '13.0'
+  s.swift_versions = '5.0'
+  s.source_files = 'MGActionSheet/Classes/**/*'
+  
+  # s.resource_bundles = {
+  #   'MGActionSheet' => ['MGActionSheet/Assets/*.png']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'FloatingBottomSheet'
+end
