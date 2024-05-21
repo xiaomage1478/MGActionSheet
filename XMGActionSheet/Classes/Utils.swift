@@ -62,13 +62,24 @@ public enum Ces {
         }
     }()
     
-    public static let topViewController: UIViewController? = {
-        let window = UIApplication.shared.delegate?.window
-        guard window != nil, let rootViewController = window?!.rootViewController else {
-            return nil
+    public static var topViewController: UIViewController? {
+        var resultVC: UIViewController?
+        resultVC = _topVC(keyWindow?.rootViewController)
+        while resultVC?.presentedViewController != nil {
+            resultVC = _topVC(resultVC?.presentedViewController)
         }
-        return getTopViewController(controller: rootViewController)
-    }()
+        return resultVC
+    }
+    
+    private static func _topVC(_ vc: UIViewController?) -> UIViewController? {
+        if vc is UINavigationController {
+            return _topVC((vc as? UINavigationController)?.topViewController)
+        } else if vc is UITabBarController {
+            return _topVC((vc as? UITabBarController)?.selectedViewController)
+        } else {
+            return vc
+        }
+    }
     
     public static func getTopViewController(controller: UIViewController) -> UIViewController {
         if let presentedViewController = controller.presentedViewController {

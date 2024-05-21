@@ -1,5 +1,5 @@
 import XCTest
-import MGActionSheet
+import XMGActionSheet
 
 class Tests: XCTestCase {
     

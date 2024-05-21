@@ -6,7 +6,7 @@
 //  Copyright (c) 2024 小马哥. All rights reserved.
 //
 
-import MGActionSheet
+import XMGActionSheet
 import UIKit
 
 class ViewController: UIViewController {
@@ -57,6 +57,13 @@ class ViewController: UIViewController {
             .addAction(title: "退出", style: .destructive)
             .addCancleAction()
             .build()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = PresentViewController()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated:  true)
     }
 }
 

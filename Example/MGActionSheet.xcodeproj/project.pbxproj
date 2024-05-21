@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		709F9B5A2BFC88A600FC9494 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709F9B592BFC88A600FC9494 /* PresentViewController.swift */; };
 		DAD1537F9F5AA47839368006 /* Pods_MGActionSheet_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B283D0DC816A0C9C9B19C449 /* Pods_MGActionSheet_Tests.framework */; };
 		E2A78C457953005AD752EC4E /* Pods_MGActionSheet_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB00C41FEF0FED51239CB46 /* Pods_MGActionSheet_Example.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		651C129589665C3340E0F021 /* Pods-MGActionSheet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGActionSheet_Tests.release.xcconfig"; path = "Target Support Files/Pods-MGActionSheet_Tests/Pods-MGActionSheet_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		709F9B592BFC88A600FC9494 /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		7DAE7A331278FEAED0045D97 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A6F6EB44E47C1CC42F2BA5EB /* Pods-MGActionSheet_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGActionSheet_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MGActionSheet_Tests/Pods-MGActionSheet_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B283D0DC816A0C9C9B19C449 /* Pods_MGActionSheet_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGActionSheet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				709F9B592BFC88A600FC9494 /* PresentViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -337,6 +340,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				709F9B5A2BFC88A600FC9494 /* PresentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
