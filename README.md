@@ -1,4 +1,4 @@
-# MGActionSheet
+# XMGActionSheet
 
 [![CI Status](https://img.shields.io/travis/小马哥/MGActionSheet.svg?style=flat)](https://travis-ci.org/小马哥/MGActionSheet)
 [![Version](https://img.shields.io/cocoapods/v/MGActionSheet.svg?style=flat)](https://cocoapods.org/pods/MGActionSheet)
@@ -17,7 +17,7 @@ MGActionSheet is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MGActionSheet'
+pod 'XMGActionSheet'
 ```
 
 ## Author
