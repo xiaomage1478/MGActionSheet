@@ -17,14 +17,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-                        MGActionSheet. 一款仿微信底部弹框，支持高度自定义
-
   s.homepage         = 'https://github.com/xiaomage1478/MGActionSheet'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '小马哥' => '354938940@qq.com' }
-  s.source           = { :git => 'https://github.com/xiaomage1478/MGActionSheet.git', :branch => 'main' }
+  s.source           = { :git => 'https://github.com/xiaomage1478/MGActionSheet.git', :tag => "#{s.version}" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
