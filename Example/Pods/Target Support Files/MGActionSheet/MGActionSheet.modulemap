@@ -1,6 +1,0 @@
-framework module MGActionSheet {
-  umbrella header "MGActionSheet-umbrella.h"
-
-  export *
-  module * { export * }
-}

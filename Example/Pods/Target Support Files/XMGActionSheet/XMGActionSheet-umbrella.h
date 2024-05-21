@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double MGActionSheetVersionNumber;
-FOUNDATION_EXPORT const unsigned char MGActionSheetVersionString[];
+FOUNDATION_EXPORT double XMGActionSheetVersionNumber;
+FOUNDATION_EXPORT const unsigned char XMGActionSheetVersionString[];
 

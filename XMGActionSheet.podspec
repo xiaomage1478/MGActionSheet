@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XMGActionSheet'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'MGActionSheet. 一款仿微信底部弹框，支持高度自定义'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
-  s.source_files = 'MGActionSheet/Classes/**/*'
+  s.source_files = 'XMGActionSheet/Classes/**/*'
   
   # s.resource_bundles = {
   #   'MGActionSheet' => ['MGActionSheet/Assets/*.png']

@@ -1,23 +1,23 @@
 PODS:
   - FloatingBottomSheet (2.0.0)
-  - MGActionSheet (0.1.0):
+  - XMGActionSheet (0.1.1):
     - FloatingBottomSheet
 
 DEPENDENCIES:
-  - MGActionSheet (from `../`)
+  - XMGActionSheet (from `../`)
 
 SPEC REPOS:
   trunk:
     - FloatingBottomSheet
 
 EXTERNAL SOURCES:
-  MGActionSheet:
+  XMGActionSheet:
     :path: "../"
 
 SPEC CHECKSUMS:
   FloatingBottomSheet: bb753e70f98e739b4678e03b819f31b85286806f
-  MGActionSheet: ab3592011c4145d82ed4e8f472862f16e2542252
+  XMGActionSheet: ecb6e9ab5d1798169ca5511da53ba37589effb0d
 
-PODFILE CHECKSUM: 3b9b745d1daa3bf2a8e06a23db192aa0c64c7c1d
+PODFILE CHECKSUM: e49424d8324e52bf6a440a962db744ad7cb8493c
 
 COCOAPODS: 1.15.2

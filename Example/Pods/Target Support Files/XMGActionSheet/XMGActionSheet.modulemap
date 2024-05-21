@@ -1,0 +1,6 @@
+framework module XMGActionSheet {
+  umbrella header "XMGActionSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
