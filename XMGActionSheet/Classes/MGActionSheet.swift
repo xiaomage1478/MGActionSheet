@@ -141,8 +141,9 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let action = actions[indexPath.row]
         guard action.isEnabled else { return }
-        action.handle?(action)
-        dismiss(animated: true)
+        dismiss(animated: true) {
+            action.handle?(action)
+        }
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

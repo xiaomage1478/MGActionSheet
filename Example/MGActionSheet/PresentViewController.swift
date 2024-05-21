@@ -27,6 +27,7 @@ class PresentViewController: UIViewController {
     @objc func showAction() {
         MGActionSheetBuilder.show(title: "是否删除该条消息？", destructiveTitle: "确定") { _ in
             print("删除了～")
+            self.dismiss(animated: true)
         }
     }
     
