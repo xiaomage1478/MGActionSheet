@@ -1,4 +1,4 @@
-![]([https://user-images.githubusercontent.com/19670000/114378430-45129480-9bba-11eb-9051-74d89c3e15f3.png](https://github.com/xiaomage1478/MGActionSheet/blob/main/cover.png))
+![](https://github.com/xiaomage1478/MGActionSheet/blob/main/cover.png)
 # XMGActionSheet
 
 [![CI Status](https://img.shields.io/travis/小马哥/MGActionSheet.svg?style=flat)](https://travis-ci.org/小马哥/MGActionSheet)
