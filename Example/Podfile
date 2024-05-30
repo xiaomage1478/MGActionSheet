@@ -4,7 +4,7 @@ platform :ios, '13.0'
 
 target 'MGActionSheet_Example' do
   pod 'XMGActionSheet', :path => '../'
-
+  pod 'FloatingBottomSheet', :git => 'https://github.com/xiaomage1478/FloatingBottomSheet.git'
   target 'MGActionSheet_Tests' do
     inherit! :search_paths
 

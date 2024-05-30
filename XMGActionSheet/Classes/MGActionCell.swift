@@ -183,7 +183,7 @@ class MGCancelActionCell: UITableViewCell {
             contentHStack.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: 10),
             contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10 - Ces.bottomSafeAreaHeight),
+            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: 50)
         ])
         
@@ -218,7 +218,7 @@ class MGCancelActionCell: UITableViewCell {
             contentHStack.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: 10),
             contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10 - Ces.bottomSafeAreaHeight),
+            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: data.config.actionMinHeight - 20)
         ])
     }

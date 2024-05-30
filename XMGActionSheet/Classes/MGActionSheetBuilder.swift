@@ -42,6 +42,7 @@ public class MGActionSheetBuilder {
     @discardableResult
     public func build() -> MGActionSheet {
         let alertController = MGActionSheet(actions: actions)
+        alertController.bottomSheetCornerRadius = 10
         alertController.show()
         return alertController
     }

@@ -1,8 +1,10 @@
 import FloatingBottomSheet
 
 public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentable {
+    public var bottomSheetCornerRadius: CGFloat = 10
+    
     public var bottomInset: CGFloat {
-        Ces.bottomSafeAreaHeight
+        0
     }
     
     public var bottomSheetHeight: CGFloat = 300

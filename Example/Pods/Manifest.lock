@@ -1,23 +1,27 @@
 PODS:
-  - FloatingBottomSheet (2.0.0)
-  - XMGActionSheet (0.1.1):
+  - FloatingBottomSheet (0.1.0)
+  - XMGActionSheet (0.1.3):
     - FloatingBottomSheet
 
 DEPENDENCIES:
+  - FloatingBottomSheet (from `https://github.com/xiaomage1478/FloatingBottomSheet.git`)
   - XMGActionSheet (from `../`)
 
-SPEC REPOS:
-  trunk:
-    - FloatingBottomSheet
-
 EXTERNAL SOURCES:
+  FloatingBottomSheet:
+    :git: https://github.com/xiaomage1478/FloatingBottomSheet.git
   XMGActionSheet:
     :path: "../"
 
-SPEC CHECKSUMS:
-  FloatingBottomSheet: bb753e70f98e739b4678e03b819f31b85286806f
-  XMGActionSheet: ecb6e9ab5d1798169ca5511da53ba37589effb0d
+CHECKOUT OPTIONS:
+  FloatingBottomSheet:
+    :commit: ce06960ace72b8d64712b95d3f51f3f57c1c79f0
+    :git: https://github.com/xiaomage1478/FloatingBottomSheet.git
 
-PODFILE CHECKSUM: e49424d8324e52bf6a440a962db744ad7cb8493c
+SPEC CHECKSUMS:
+  FloatingBottomSheet: 56233a54411d35ed07c07aabcb8beb77cec53775
+  XMGActionSheet: 422dda8c86aff21f934e695c9a8107cb2a5f1bd1
+
+PODFILE CHECKSUM: 13fd028534400f1f02bced944bef70a44cebb87e
 
 COCOAPODS: 1.15.2
