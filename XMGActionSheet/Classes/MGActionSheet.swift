@@ -30,6 +30,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     }
     
     public private(set) var actions: [MGAction]
+    public var backgroundColor = UIColor.white 
     
     public init(actions: [MGAction]) {
         self.actions = actions
@@ -54,12 +55,13 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = backgroundColor
         setupTableView()
         updateBottomSheetHeight()
         bottomSheetPerformLayout(animated: true)

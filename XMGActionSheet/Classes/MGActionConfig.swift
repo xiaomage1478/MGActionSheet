@@ -7,6 +7,7 @@ public struct MGActionConfig {
     
     /// title 和 subtitle 的间距
     public var spacing: CGFloat = 4
+    public var backgroundColor: UIColor? = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     public var selectionBackgroundColor: UIColor? = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.5547392384)
     
     public var subtitleColor: UIColor? = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -25,24 +26,26 @@ public struct MGActionConfig {
     public var cancelSeparatorHeight: CGFloat = 5
     
     public init(
-        titleColor: UIColor? = Ces.color("#373737"),
-            titleFont: UIFont? = .systemFont(ofSize: 16, weight: .regular),
-            spacing: CGFloat = 4,
-            selectionBackgroundColor: UIColor? = Ces.color("#CDCDCD", alpha: 0.5),
-            subtitleColor: UIColor? = Ces.color("#CDCDCD"),
-            subtitleFont: UIFont? = .systemFont(ofSize: 12, weight: .regular),
-            separatorColor: UIColor? = Ces.color("#E8E8E8"),
-            separatorHeight: CGFloat = Ces.px1,
-            separatorInset: UIEdgeInsets = .init(top: 0, left: 12, bottom: 0, right: 12),
-            isAutoHeight: Bool = true,
-            actionHeight: CGFloat = UITableView.automaticDimension,
-            actionMinHeight: CGFloat = 55,
-            cancelSeparatorColor: UIColor? = Ces.color("#F2F3F6"),
-            cancelSeparatorHeight: CGFloat = 5
+        titleColor: UIColor? = MGGlobalUIConfig.shared.titleColor,
+            titleFont: UIFont? = MGGlobalUIConfig.shared.titleFont,
+            spacing: CGFloat = MGGlobalUIConfig.shared.spacing,
+            backgroundColor: UIColor? = MGGlobalUIConfig.shared.cellBackgroundColor,
+            selectionBackgroundColor: UIColor? = MGGlobalUIConfig.shared.selectionBackgroundColor,
+            subtitleColor: UIColor? = MGGlobalUIConfig.shared.subtitleColor,
+            subtitleFont: UIFont? = MGGlobalUIConfig.shared.subtitleFont,
+            separatorColor: UIColor? = MGGlobalUIConfig.shared.separatorColor,
+            separatorHeight: CGFloat = MGGlobalUIConfig.shared.separatorHeight,
+            separatorInset: UIEdgeInsets = MGGlobalUIConfig.shared.separatorInset,
+            isAutoHeight: Bool = MGGlobalUIConfig.shared.isAutoHeight,
+            actionHeight: CGFloat = MGGlobalUIConfig.shared.actionHeight,
+            actionMinHeight: CGFloat = MGGlobalUIConfig.shared.actionMinHeight,
+            cancelSeparatorColor: UIColor? = MGGlobalUIConfig.shared.cancelSeparatorColor,
+            cancelSeparatorHeight: CGFloat = MGGlobalUIConfig.shared.cancelSeparatorHeight
         ) {
             self.titleColor = titleColor
             self.titleFont = titleFont
             self.spacing = spacing
+            self.backgroundColor = backgroundColor
             self.selectionBackgroundColor = selectionBackgroundColor
             self.subtitleColor = subtitleColor
             self.subtitleFont = subtitleFont

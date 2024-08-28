@@ -57,11 +57,11 @@ public extension MGAction.Style {
     var config: MGActionConfig {
         switch self {
         case .default:
-            MGActionConfig()
+            MGGlobalAction.shared.defaultAction
         case .cancel:
-            MGActionConfig(titleFont: .systemFont(ofSize: 16))
+            MGGlobalAction.shared.cancelAction
         case .destructive:
-            MGActionConfig(titleColor: .red, titleFont: .systemFont(ofSize: 16))
+            MGGlobalAction.shared.destructiveAction
         }
     }
 }

@@ -57,6 +57,7 @@ class MGActionCell: UITableViewCell {
     }
     
     func setupUI() {
+        contentView.backgroundColor = .white
         contentView.addSubview(contentHStack)
         contentView.addSubview(bottomLine)
         
@@ -77,6 +78,7 @@ class MGActionCell: UITableViewCell {
     }
     
     func config(_ data: MGAction) {
+        contentView.backgroundColor = data.config.backgroundColor
         /// 标题配置
         titleLab.text = data.title
         titleLab.textColor = data.config.titleColor
@@ -190,6 +192,8 @@ class MGCancelActionCell: UITableViewCell {
     }
     
     func config(_ data: MGAction) {
+        contentView.backgroundColor = data.config.backgroundColor
+        
         titleLab.text = data.title
         titleLab.textColor = data.config.titleColor
         titleLab.font = data.config.titleFont

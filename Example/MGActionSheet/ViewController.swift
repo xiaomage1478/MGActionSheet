@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        MGGlobalConfig.config { ui in
+            ui.backgroundColor = .red
+            ui.cancelSeparatorColor = .blue
+        } actionConfig: { action in
+            action.destructiveAction = MGActionConfig(titleColor: .green, titleFont: .boldSystemFont(ofSize: 20))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +29,12 @@ class ViewController: UIViewController {
     @IBAction func deleteStyle(_ sender: Any) {
         MGActionSheetBuilder.show(title: "是否删除该条消息？", destructiveTitle: "确定") { _ in
             print("删除了～")
+            MGGlobalConfig.config { ui in
+                ui.backgroundColor = .white
+                ui.cancelSeparatorColor = Ces.color("#F2F3F6")
+            } actionConfig: { action in
+                action.destructiveAction = MGActionConfig(titleColor: .green, titleFont: .boldSystemFont(ofSize: 20))
+            }
         }
     }
     
@@ -30,6 +42,7 @@ class ViewController: UIViewController {
         MGActionSheetBuilder()
             .addAction(title: "退出网页版文件传输助手？", style: .default, isEnable: false)
             .addAction(title: "退出", style: .destructive)
+            .setBackgroundColor(.gray)
             .addCancleAction()
             .build()
     }

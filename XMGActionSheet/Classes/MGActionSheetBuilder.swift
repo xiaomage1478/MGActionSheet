@@ -1,6 +1,7 @@
 
 public class MGActionSheetBuilder {
     private var actions: [MGAction] = []
+    private var backgroundColor: UIColor = MGGlobalUIConfig.shared.backgroundColor
 
     public init() {}
 
@@ -38,11 +39,18 @@ public class MGActionSheetBuilder {
         actions.append(contentsOf: acs)
         return self
     }
+    
+    @discardableResult
+    public func setBackgroundColor(_ color: UIColor) -> MGActionSheetBuilder {
+        backgroundColor = color
+        return self
+    }
 
     @discardableResult
     public func build() -> MGActionSheet {
         let alertController = MGActionSheet(actions: actions)
         alertController.bottomSheetCornerRadius = 10
+        alertController.backgroundColor = backgroundColor
         alertController.show()
         return alertController
     }
