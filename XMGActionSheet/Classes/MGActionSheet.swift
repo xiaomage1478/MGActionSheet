@@ -4,21 +4,23 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     public var bottomSheetCornerRadius: CGFloat = 10
     
     public var bottomInset: CGFloat {
-        0
+        Ces.bottomSafeAreaHeight
     }
     
     public var bottomSheetHeight: CGFloat = 300
+    
+    public var titleViewHeight: CGFloat = 0
 
     public var bottomSheetScrollable: UIScrollView? {
         tableView
     }
 
     public var bottomSheetInsets: NSDirectionalEdgeInsets {
-        .init(top: -24, leading: 0, bottom: 0, trailing: 0)
+        .init(top: -0, leading: 0, bottom: Ces.bottomSafeAreaHeight, trailing: 0)
     }
     
     public var allowsDragToDismiss: Bool {
-        false
+        true
     }
     
     public var bottomSheetHandleColor: UIColor {
@@ -26,7 +28,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     }
     
     public func shouldRespond(to panGestureRecognizer: UIPanGestureRecognizer) -> Bool {
-        false
+        true
     }
     
     public private(set) var actions: [MGAction]
@@ -47,6 +49,24 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         fatalError("init(coder:) has not been implemented")
     }
     
+    public var titleView: UIView = {
+        let view = UIView()
+        view.isHidden = true
+        return view
+    }()
+    
+    lazy var contentStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [tableView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .vertical
+        stack.spacing = 0
+        stack.alignment = .fill
+        stack.distribution = .fill
+        return stack
+    }()
+    
+    var tableViewHeightConstraint: NSLayoutConstraint?
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +76,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: Ces.width, height: Ces.bottomSafeAreaHeight))
         return tableView
     }()
     
@@ -63,14 +84,14 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         super.viewDidLoad()
         view.backgroundColor = backgroundColor
         setupTableView()
-        updateBottomSheetHeight()
-        bottomSheetPerformLayout(animated: true)
+//        updateBottomSheetHeight()
+//        bottomSheetPerformLayout(animated: true)
     }
 
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateBottomSheetHeight()
-        bottomSheetPerformLayout(animated: true)
+        bottomSheetPerformLayout(animated: false)
     }
     
     private func resortActions() {
@@ -84,13 +105,19 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     }
 
     private func setupTableView() {
-        view.addSubview(tableView)
-        
+        view.addSubview(contentStack)
+        titleView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomInset)
+            contentStack.topAnchor.constraint(equalTo: view.topAnchor),
+            contentStack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            contentStack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            contentStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomInset)
+        ])
+        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 50)
+        tableView.tableHeaderView = titleView
+        NSLayoutConstraint.activate([
+            tableViewHeightConstraint!,
+            titleView.heightAnchor.constraint(equalToConstant: titleViewHeight)
         ])
         
         tableView.reloadData()
@@ -98,6 +125,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
 
     private func updateBottomSheetHeight() {
         tableView.layoutIfNeeded()
+        tableViewHeightConstraint?.constant = tableView.contentSize.height
         let height = bottomInset + tableView.contentSize.height
         tableView.isScrollEnabled = height > maxHeight
         bottomSheetHeight = min(height, maxHeight)
