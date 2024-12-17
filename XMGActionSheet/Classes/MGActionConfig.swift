@@ -1,7 +1,6 @@
 
 
 public struct MGActionConfig {
-    
     public var titleColor: UIColor? = #colorLiteral(red: 0.2156862745, green: 0.2156862745, blue: 0.2156862745, alpha: 1)
     public var titleFont: UIFont? = .systemFont(ofSize: 16, weight: .regular)
     

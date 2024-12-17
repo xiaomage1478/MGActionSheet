@@ -1,4 +1,4 @@
-
+@MainActor
 public class MGActionSheetBuilder {
     private var actions: [MGAction] = []
     private var backgroundColor: UIColor = MGGlobalUIConfig.shared.backgroundColor

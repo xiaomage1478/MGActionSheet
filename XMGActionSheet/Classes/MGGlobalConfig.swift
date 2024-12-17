@@ -6,16 +6,17 @@
 //
 
 import Foundation
-
 public typealias UIConfiguration = (MGGlobalUIConfig)->Void
 public typealias ActionConfiguration = (MGGlobalAction)->Void
 
+@MainActor
 public class MGGlobalConfig {
     public static func config(uiConfig: UIConfiguration, actionConfig: ActionConfiguration) {
         uiConfig(MGGlobalUIConfig.shared)
         actionConfig(MGGlobalAction.shared)
     }
 }
+
 
 public class MGGlobalUIConfig {
     public static var shared = MGGlobalUIConfig()
@@ -46,13 +47,14 @@ public class MGGlobalUIConfig {
     public var cancelSeparatorHeight: CGFloat = 5
 }
 
+@MainActor
 public class MGGlobalAction {
-    public static var shared = MGGlobalAction()
+    @MainActor public static var shared = MGGlobalAction()
     
     /// 全局配置默认的 Action 样式
-    public var defaultAction: MGActionConfig = .init()
+    @MainActor public var defaultAction: MGActionConfig = .init()
     /// 全局配置警告的 Action 样式
-    public var destructiveAction: MGActionConfig = .init(titleColor: .red, titleFont: .systemFont(ofSize: 16))
+    @MainActor public var destructiveAction: MGActionConfig = .init(titleColor: .red, titleFont: .systemFont(ofSize: 16))
     /// 全局配置取消按钮的 Action 样式
-    public var cancelAction: MGActionConfig = .init(titleFont: .systemFont(ofSize: 16))
+    @MainActor public var cancelAction: MGActionConfig = .init(titleFont: .systemFont(ofSize: 16))
 }
