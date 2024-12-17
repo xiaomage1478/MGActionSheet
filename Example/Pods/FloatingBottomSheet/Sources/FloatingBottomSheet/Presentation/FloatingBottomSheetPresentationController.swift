@@ -44,7 +44,7 @@ public final class FloatingBottomSheetPresentationController: UIPresentationCont
   private lazy var handleView: UIView = {
     let view = UIView()
     view.backgroundColor = presentable?.bottomSheetHandleColor
-    view.layer.cornerRadius = BottomSheetHandleMetric.size.height * 0.5
+    view.layer.cornerRadius = FloatingBottomSheetHandleMetric.size.height * 0.5
     return view
   }()
 
@@ -137,9 +137,14 @@ public final class FloatingBottomSheetPresentationController: UIPresentationCont
     adjustBackgroundColors()
 
     guard let coordinator = presentedViewController.transitionCoordinator else {
+      // Calls viewWillAppear and viewWillDisappear
+      presentingViewController.beginAppearanceTransition(false, animated: false)
       dimmingView.alpha = 1.0
       return
     }
+
+    // Calls viewWillAppear and viewWillDisappear
+    presentingViewController.beginAppearanceTransition(false, animated: coordinator.isAnimated)
 
     coordinator.animate(alongsideTransition: { [weak self] _ in
       self?.dimmingView.alpha = 1.0
@@ -148,9 +153,12 @@ public final class FloatingBottomSheetPresentationController: UIPresentationCont
   }
 
   public override func presentationTransitionDidEnd(_ completed: Bool) {
-    guard !completed else { return }
+    // Calls viewDidAppear and viewDidDisappear
+    presentingViewController.endAppearanceTransition()
 
-    dimmingView.removeFromSuperview()
+    if !completed {
+      dimmingView.removeFromSuperview()
+    }
   }
 
 
@@ -160,20 +168,31 @@ public final class FloatingBottomSheetPresentationController: UIPresentationCont
     presentable?.bottomSheetWillDismiss()
 
     guard let coordinator = presentedViewController.transitionCoordinator else {
+      // Calls viewWillAppear and viewWillDisappear
+      presentingViewController.beginAppearanceTransition(true, animated: false)
       dimmingView.alpha = 0.0
       return
     }
 
-    coordinator.animate { [weak self] _ in
+    // Calls viewWillAppear and viewWillDisappear
+    presentingViewController.beginAppearanceTransition(true, animated: coordinator.isAnimated)
+
+    coordinator.animate { [weak self] context in
       self?.dimmingView.alpha = 0.0
+      if !context.isAnimated {
+        self?.bottomSheetContainerView.alpha = 0.0
+      }
       self?.presentingViewController.setNeedsStatusBarAppearanceUpdate()
     }
   }
 
   public override func dismissalTransitionDidEnd(_ completed: Bool) {
-    if completed { return }
+    // Calls viewDidAppear and viewDidDisappear
+    presentingViewController.endAppearanceTransition()
 
-    presentable?.bottomSheetDidDismiss()
+    if completed {
+      presentable?.bottomSheetDidDismiss()
+    }
   }
 }
 
@@ -209,19 +228,18 @@ extension FloatingBottomSheetPresentationController {
       observe(scrollView: presentable?.bottomSheetScrollable)
       configureScrollViewInsets()
       containerView?.setNeedsLayout()
-      containerView?.layoutIfNeeded()
     }
   }
 
   private func adjustHandleViewFrame() {
-    handleView.frame.origin.y = BottomSheetHandleMetric.verticalMargin
-    handleView.frame.size = BottomSheetHandleMetric.size
+    handleView.frame.origin.y = FloatingBottomSheetHandleMetric.verticalMargin
+    handleView.frame.size = FloatingBottomSheetHandleMetric.size
     handleView.center.x = CGRectGetMidX(bottomSheetContainerView.bounds)
   }
 
   private func adjustPresentedViewControllerTopInset() {
-    presentedViewController.additionalSafeAreaInsets.top = handleView.frame.maxY + BottomSheetHandleMetric
-      .verticalMargin
+    let topInset = handleView.frame.maxY + FloatingBottomSheetHandleMetric.verticalMargin
+    presentedViewController.additionalSafeAreaInsets.top = topInset
   }
 
   private func adjustBackgroundColors() {

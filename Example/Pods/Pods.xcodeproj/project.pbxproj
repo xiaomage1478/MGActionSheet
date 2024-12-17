@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E3D284ABEC2974E55313AF31BA0FBC /* FloatingBottomSheetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D139203870A76399455AD1C440885 /* FloatingBottomSheetContainerView.swift */; };
+		045E876A1744E35A6985CA4B4145CC29 /* FloatingBottomSheetPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C8BA3893F0936A3B246EDA0D4DA67 /* FloatingBottomSheetPresentationDelegate.swift */; };
 		08C7329408FBD365173AF41AFCE7FBDA /* MGGlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193B5BBCD97770F99BC8B26EEB6985DB /* MGGlobalConfig.swift */; };
 		0A5C290276F7453D9471E25BEA655842 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3DC226427EDFB689CA5DAF972A703 /* ConstraintLayoutGuide.swift */; };
 		0AD7A0DA8FF5880E3D8599062129AB12 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D01A2D41BBC880AA7AABABEBDB5BB7 /* ConstraintMakerEditable.swift */; };
 		0D665B6767B345D8C70D7E029A2A48D8 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295A84CB24038CAE4232900B7E47E1D /* ConstraintViewDSL.swift */; };
 		0DA9A9D2F8960818017E26DA480FA143 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D46694915BD1A997F57918FFB05553 /* ConstraintLayoutGuideDSL.swift */; };
+		120A33BBA9CFE18820CD2ACD8DCA4533 /* FloatingBottomSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DFDC6A60350C5056F53CA428DB2219 /* FloatingBottomSheetPresenter.swift */; };
 		12461D05D609E46156BD57EE39522BEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		139970FCDFE861F596F45D70BCF56B61 /* Pods-MGActionSheet_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF56549D1054106CEC81C969063B6CAF /* Pods-MGActionSheet_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13CC0CFB1C56F23BBC872801F983C1A3 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5CB9283820466732F020950ABA1D1D /* ConstraintLayoutSupport.swift */; };
 		15F68E09ADCDB843B938C490059485BD /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9D4F4A55CCA2F43A9797EE040B1D /* ConstraintMakerRelatable+Extensions.swift */; };
 		193DCC2680049BDF7D2773C826FE95A2 /* MGActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA341020AC50847104A0BB9882395E9 /* MGActionCell.swift */; };
-		1BF5A1C4F29715BE9482C107C05F41B4 /* UIColor+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4FFE5C4CA33E9BE20543E8103B8852 /* UIColor+Init.swift */; };
 		1E7E37C51375285EA22294CD2ADB3159 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601E930C644148E8889434CF6818544 /* Debugging.swift */; };
-		21DDDC1F0F179B23F5175D08B0FE6A0A /* FloatingBottomSheetPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780D5D8047298C153F4DC45450ECC1F /* FloatingBottomSheetPresentationDelegate.swift */; };
+		2192E2C0D4320864B47A4FE07F11575B /* FloatingBottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F4E94D5E8CCDF908FF97EBA806D92 /* FloatingBottomSheetPresentationController.swift */; };
 		27AE689777F232DE82E4FECC36645AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		2EBB6C025E239DE3128D0EDAE46A7134 /* FloatingBottomSheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2DA18444707999F2DD17E72BC8068A3 /* FloatingBottomSheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D83B7EA206E844A6DCD323174799F3A /* FloatingBottomSheetPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB4BAA87E823AA9C465DF1468A167D0 /* FloatingBottomSheetPresentable+UIViewController.swift */; };
+		2EBB6C025E239DE3128D0EDAE46A7134 /* FloatingBottomSheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB846FDAB0FD76C43502CC81B14CD78 /* FloatingBottomSheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3417D18D13B705E68936F2FB3BCD0AAB /* FloatingBottomSheetPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F6C7D7D40526546C6A088006DCC71 /* FloatingBottomSheetPresentable.swift */; };
 		360F009450E7675D041A5A257599C9DF /* Pods-MGActionSheet_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0734422CBBA206BA991E21B5B124A66 /* Pods-MGActionSheet_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DAFEDCDC5094007E329D71FE84FF704 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAC390E959633455927488E18E3018 /* SnapKit-dummy.m */; };
+		3F32FEFD9317BB775ED5F8A192F107F8 /* UIViewController+FloatingBottomSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC844C202B529CDBB86FBA9DD0BE2E22 /* UIViewController+FloatingBottomSheetPresenter.swift */; };
+		435213327CAD477B2FF8C07F8E1405FE /* UIColor+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED9045330A6FC44742B751A2FFFB817 /* UIColor+Init.swift */; };
 		50E4E24710A4C5A77BE6594A10DFE773 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C624DC1C1F47A7FCDBCB09CB6CB16D1D /* ConstraintMultiplierTarget.swift */; };
 		56CD198002D3D45274F6719725B983CF /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A9C26CF4A195BB0E803CB7E8E81CB0 /* ConstraintOffsetTarget.swift */; };
 		595FFCD511A9D2744A58D91F58BDC8C6 /* MGAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7315C170BE26A5719F5EC566AA69405B /* MGAction.swift */; };
@@ -35,17 +41,13 @@
 		6D389E4D5F97798BE1AEEB8C317852D7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9F36CF6DA01172010265DE49A2B35D /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E2884B29CD49EE91C48C725105F295A /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24398FE6BFB133F827B736D1B723D587 /* LayoutConstraint.swift */; };
 		7052944C657F270E47777446D0E10E1C /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E27F0EAB62DE93BD6ACF636AEC00C63 /* ConstraintInsetTarget.swift */; };
-		737AB2682BF9BA7F1AF729DA547810D5 /* FloatingBottomSheetPresentable+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C35ED75B543C4FD8183FF2CDBD8D8 /* FloatingBottomSheetPresentable+Internal.swift */; };
 		73F8AC99A58E5837924C056E89543B97 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40313434773DC75575301944E7C443E2 /* Typealiases.swift */; };
-		74BD9FFE240CD85E9102A69C952B6F55 /* FloatingBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97667495CCB8F99C412E96F14D02D0B4 /* FloatingBottomSheet.swift */; };
 		77D782DE125D322922466676E2FFA289 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E886A5D6C412B339C68F97220313F4 /* ConstraintPriorityTarget.swift */; };
 		7D2A0925A7169CC014A07239B6ED3C6F /* MGActionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93B8923F45693E0D54031D48194833 /* MGActionConfig.swift */; };
-		7D9672222B184DF5CA6C516BB4E85479 /* BottomSheetHandleMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54889E92340A2639BAA33649BEF355 /* BottomSheetHandleMetric.swift */; };
 		8640829049AE9907FE93825E5510C33D /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79CDD727634210EDEBD912B46DF99F /* ConstraintMaker.swift */; };
 		87996D11DC92EE19EAF9305DAEA4ACF2 /* ConstraintMakerPrioritizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EE5AE530AE5F84316318550961A4C9 /* ConstraintMakerPrioritizable.swift */; };
 		8868BA37E3CE7C58D26123806D543F3F /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D200C6C6AA9CA68D4237063D2AE003 /* ConstraintView.swift */; };
 		891D1BF14C8881C74262EE9DBE5D67A9 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01D51707A13B74DA2335DFE0D9EA02 /* UILayoutSupport+Extensions.swift */; };
-		8C9CE09D7434EEC5DFB1F2B7ABE93CAF /* FloatingBottomSheetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F46C47FA49F5421A406C5FAA2670D56 /* FloatingBottomSheetContainerView.swift */; };
 		906EF891E58A035281766993F82373E3 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B41DDB34B25B79154B45FA62FA1802 /* ConstraintItem.swift */; };
 		9269982911E3A9FCD66676B71EC22364 /* Pods-MGActionSheet_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 021B4B33464642D4F565E7178D5CA7B5 /* Pods-MGActionSheet_Example-dummy.m */; };
 		938CFF5F6DE6E7E8CE94373E51F3E07A /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA291EC9CDE1E41F1EB26FBC931933E0 /* ConstraintLayoutGuide+Extensions.swift */; };
@@ -54,34 +56,32 @@
 		A0371DF7D93D9B86BD50474D4B9294FD /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF13736CAF296076FF8C4DC59F9FD84B /* ConstraintInsets.swift */; };
 		A051999781E1280746F7743BDEEA6C49 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A1CD985E099E26CB184DF0F0E47AA /* ConstraintDescription.swift */; };
 		A35877DE0C3D6B4CF2A10E666EF5F490 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADFF7FA2EDD5EAC7C91F7D84C0232D7 /* LayoutConstraintItem.swift */; };
+		AB5744158B6CEBB316C485A0964D7B5E /* FloatingBottomSheetPresentable+Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B440E48174A36F2FF6F687E7A525F22 /* FloatingBottomSheetPresentable+Internal.swift */; };
 		B133BB9C9B03481C7F1D221F35A617F2 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10CF22203AC906E9DF7C4C5524F2C71 /* Constraint.swift */; };
+		B2A5BDD266D93A90ED62E27664115121 /* FloatingBottomSheetAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845F475DA13A0E0A492BF6AE106CB17D /* FloatingBottomSheetAnimator.swift */; };
 		B3F75D115D5150C258F5E68404751010 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AE4F859D8C32C7DD83F1894DCB20AE /* ConstraintConstantTarget.swift */; };
+		B477ADCD18E0D59139A7F3DB90D312AC /* FloatingBottomSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 930B39A7370AF21379738CF5C189A5F3 /* FloatingBottomSheet-dummy.m */; };
 		B4F9C9EC1B3F1689AE56BB719AE5439C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7A0CC5897527E8C0334EEB22F170EF /* ConstraintDirectionalInsetTarget.swift */; };
 		BB3133478D24F1D9E6552F873D0607CB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4759F57FC10A8562ECDD66880AB789 /* Utils.swift */; };
 		BE355F69F84788D334FDAC7D1CD9B8C4 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC4FE9529D9133AFA9EDD6A30FDC73 /* ConstraintDirectionalInsets.swift */; };
-		BEF18AE3DA7E2D266CC7A857CB3FDFAE /* FloatingBottomSheetPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ADAF92EC58A199F1ABC355FC3AA0D2 /* FloatingBottomSheetPresentable.swift */; };
-		BF2EA5170D3E09F669D572FC740FDC4D /* FloatingBottomSheetPresentable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7461C4D3D3437B5451A62DD97AA3A15C /* FloatingBottomSheetPresentable+Default.swift */; };
 		BF567AEFDD52DC43AC75122734D571E2 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAB225E12186A7C9B7128219F666CB8 /* ConstraintMakerFinalizable.swift */; };
 		C04DBE6AE13FC5CFD01D363A351EF76A /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BC77566B57722187EA5754BB72F11A /* ConstraintView+Extensions.swift */; };
-		C54CDD3B7E5A82863E41A2D0EE033B0E /* FloatingBottomSheetPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67DD6B091C81D75DFB59626FCDB5E46 /* FloatingBottomSheetPresentationAnimator.swift */; };
+		C0B8B3BCBFF7B9E562B1EEB0D3770040 /* FloatingBottomSheetPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDB4A68341835128C7A305054BA8576 /* FloatingBottomSheetPresentationAnimator.swift */; };
 		C7E343559158D03F717C616F79FAA006 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		C98D7B2E750BFF02985F0E08F37A7BCC /* FloatingBottomSheetPresentable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = E129FCCE5F52E8059F753B7CB9222665 /* FloatingBottomSheetPresentable+Default.swift */; };
 		CAC0080D6DFA328F458A77A3FB25727F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		D091D9EA20CEB92609BF1E622E8CA348 /* SnapKit-SnapKit_Privacy in Resources */ = {isa = PBXBuildFile; fileRef = B9DCB5EC0B1CDADD221717CADDF62359 /* SnapKit-SnapKit_Privacy */; };
-		D268FA13A4A5082E97FB1378D92EF992 /* UIViewController+FloatingBottomSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8979EDB94BA465F3374036BCD3D33EF /* UIViewController+FloatingBottomSheetPresenter.swift */; };
 		D92AEF78B87F929D88D5C876ABBAD79A /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9612FD330E1096B19D4604B7A929B4 /* ConstraintLayoutSupportDSL.swift */; };
-		DA65F5DCFFEE1B2DFFD228BE6CDA8875 /* FloatingBottomSheetPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0F913D94B5CDE19AD8A8BE8470C80 /* FloatingBottomSheetPresentable+UIViewController.swift */; };
 		DAB1E79FD58969C81F2F3F0DB04EAB89 /* XMGActionSheet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03FFBD5F7F5FD0ACE1E01CB382282B9B /* XMGActionSheet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DABB257C5F7339A391C5C5C1676709AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		E7DE4ED02EA542849366FD5D35E01B16 /* FloatingBottomSheetAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32423004B4D032D0C82457B2797E424 /* FloatingBottomSheetAnimator.swift */; };
-		E836966C8D0AA34B656B2D95C276BC4A /* FloatingBottomSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A263C08DC38F7709447A6DD554B070F1 /* FloatingBottomSheetPresenter.swift */; };
+		DF3CAC36D17F1AE872372958262B79B5 /* FloatingBottomSheetHandleMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6490ACA953D7617227311A093BFD6 /* FloatingBottomSheetHandleMetric.swift */; };
+		E530C71E07DA68CF26A0F3A80BC1D849 /* FloatingBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D9243CC15426575F72E42D82694A14 /* FloatingBottomSheet.swift */; };
 		E94B31DCAF75D93405D3BAE188604EB2 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2AEC704A215BCED5C6FC2C3E087B18 /* ConstraintConfig.swift */; };
 		EC5AD84BCD2397D874BAD916609042CC /* Pods-MGActionSheet_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B544C1A26E238389DD82D8C85A5D03 /* Pods-MGActionSheet_Tests-dummy.m */; };
 		EFC90283F9AB43BB6FF377812BD3673F /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FFC29CA47A9CFB39607A20D3DFEA55 /* ConstraintPriority.swift */; };
 		F366D04DEA0EBBCA9CA4F1F4E29695E8 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479E1B463E181638B8C26E0F3CDB51B /* ConstraintDSL.swift */; };
 		F5B9263BEEE110DD2D67079551B357B6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE4AF2D0215199FB4D7B2C718DA39F /* PrivacyInfo.xcprivacy */; };
-		F8B245B2E8FFC29057680EA9DECF60E6 /* FloatingBottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AFE74496C5F1C5E92EE3888EED7883 /* FloatingBottomSheetPresentationController.swift */; };
 		F94703ED86C58DDBE5A2503D148CD040 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE2B28A1A55A0D4EEC84B734D25AF97 /* ConstraintRelation.swift */; };
-		FA071DBC88D34E1CD5E019ACCEC08283 /* FloatingBottomSheet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29617D42E6EF33BF9DEB2C51DA9B02D8 /* FloatingBottomSheet-dummy.m */; };
 		FFD7E1B8FA0F3960BE24DA2D20647332 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694402BB50D503C74D7F445321C8EADC /* ConstraintRelatableTarget.swift */; };
 /* End PBXBuildFile section */
 
@@ -134,12 +134,12 @@
 		00BC77566B57722187EA5754BB72F11A /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Sources/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		00D7E5BB6B28BB4493DAA31773A584C8 /* Pods-MGActionSheet_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGActionSheet_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		021B4B33464642D4F565E7178D5CA7B5 /* Pods-MGActionSheet_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGActionSheet_Example-dummy.m"; sourceTree = "<group>"; };
+		03D9243CC15426575F72E42D82694A14 /* FloatingBottomSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheet.swift; path = Sources/FloatingBottomSheet/Presentable/FloatingBottomSheet.swift; sourceTree = "<group>"; };
 		03FFBD5F7F5FD0ACE1E01CB382282B9B /* XMGActionSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMGActionSheet-umbrella.h"; sourceTree = "<group>"; };
-		063C35ED75B543C4FD8183FF2CDBD8D8 /* FloatingBottomSheetPresentable+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+Internal.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+Internal.swift"; sourceTree = "<group>"; };
-		0780D5D8047298C153F4DC45450ECC1F /* FloatingBottomSheetPresentationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationDelegate.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetPresentationDelegate.swift; sourceTree = "<group>"; };
 		09D46694915BD1A997F57918FFB05553 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Sources/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		09D963EA3D83CC36B4EA00727374D195 /* MGActionSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGActionSheet.swift; path = XMGActionSheet/Classes/MGActionSheet.swift; sourceTree = "<group>"; };
 		0F7DBEBA3089EBDB90006D2A299D3F55 /* Pods-MGActionSheet_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGActionSheet_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		1353D365901E22A587366563BDF8CD7B /* FloatingBottomSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingBottomSheet-prefix.pch"; sourceTree = "<group>"; };
 		1517B700293B821F1E9C62FE315DBD46 /* Pods-MGActionSheet_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MGActionSheet_Tests"; path = Pods_MGActionSheet_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AE4F859D8C32C7DD83F1894DCB20AE /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Sources/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		193B5BBCD97770F99BC8B26EEB6985DB /* MGGlobalConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGGlobalConfig.swift; path = XMGActionSheet/Classes/MGGlobalConfig.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 		1EFE4AF2D0215199FB4D7B2C718DA39F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		21CAC390E959633455927488E18E3018 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		24398FE6BFB133F827B736D1B723D587 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Sources/LayoutConstraint.swift; sourceTree = "<group>"; };
-		29617D42E6EF33BF9DEB2C51DA9B02D8 /* FloatingBottomSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingBottomSheet-dummy.m"; sourceTree = "<group>"; };
-		29AFE74496C5F1C5E92EE3888EED7883 /* FloatingBottomSheetPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationController.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetPresentationController.swift; sourceTree = "<group>"; };
+		27DD8E91E5C3A7224D5057D196F6F4DF /* FloatingBottomSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingBottomSheet.release.xcconfig; sourceTree = "<group>"; };
+		2F849C651E0E7708F6CB8444379335FA /* FloatingBottomSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingBottomSheet.debug.xcconfig; sourceTree = "<group>"; };
 		36A6787FE437000975D28800915549E4 /* Pods-MGActionSheet_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGActionSheet_Example.modulemap"; sourceTree = "<group>"; };
 		380DF2810AB94C1C9E7169DE5556020A /* ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist"; sourceTree = "<group>"; };
 		3BF2B865B66DED92DCE1A62D682AD9F3 /* MGActionSheetBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGActionSheetBuilder.swift; path = XMGActionSheet/Classes/MGActionSheetBuilder.swift; sourceTree = "<group>"; };
@@ -158,10 +158,11 @@
 		403CC4EFE8DF056BA8DFF9F25DC30B4C /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		41199BD74B546EF00A426716EE1C28D8 /* XMGActionSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMGActionSheet-prefix.pch"; sourceTree = "<group>"; };
 		41EE5AE530AE5F84316318550961A4C9 /* ConstraintMakerPrioritizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPrioritizable.swift; path = Sources/ConstraintMakerPrioritizable.swift; sourceTree = "<group>"; };
-		42E0F913D94B5CDE19AD8A8BE8470C80 /* FloatingBottomSheetPresentable+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+UIViewController.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+UIViewController.swift"; sourceTree = "<group>"; };
-		43ECF06B56F6F55CB977601BBDD19C61 /* FloatingBottomSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingBottomSheet.debug.xcconfig; sourceTree = "<group>"; };
 		46D200C6C6AA9CA68D4237063D2AE003 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Sources/ConstraintView.swift; sourceTree = "<group>"; };
+		49EA688BC548AB3291AFEDB922C87017 /* FloatingBottomSheet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingBottomSheet-Info.plist"; sourceTree = "<group>"; };
+		4A7F4E94D5E8CCDF908FF97EBA806D92 /* FloatingBottomSheetPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationController.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetPresentationController.swift; sourceTree = "<group>"; };
 		4ADFF7FA2EDD5EAC7C91F7D84C0232D7 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Sources/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		4CDB4A68341835128C7A305054BA8576 /* FloatingBottomSheetPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationAnimator.swift; path = Sources/FloatingBottomSheet/Animator/FloatingBottomSheetPresentationAnimator.swift; sourceTree = "<group>"; };
 		4DE2B28A1A55A0D4EEC84B734D25AF97 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Sources/ConstraintRelation.swift; sourceTree = "<group>"; };
 		4FC581D9B6863F1C9BC8354EE2578A55 /* Pods-MGActionSheet_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGActionSheet_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		535AEF8C11760B7B3DBBDD63FF70BDBE /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Sources/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
@@ -170,41 +171,38 @@
 		57AC4FE9529D9133AFA9EDD6A30FDC73 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Sources/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		5A677EE280DD8833E7439AAE8F2FFC27 /* XMGActionSheet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XMGActionSheet-Info.plist"; sourceTree = "<group>"; };
 		5A93B8923F45693E0D54031D48194833 /* MGActionConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGActionConfig.swift; path = XMGActionSheet/Classes/MGActionConfig.swift; sourceTree = "<group>"; };
+		5B440E48174A36F2FF6F687E7A525F22 /* FloatingBottomSheetPresentable+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+Internal.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+Internal.swift"; sourceTree = "<group>"; };
 		5C7A0CC5897527E8C0334EEB22F170EF /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Sources/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		5D1A16115C4DA678FB27B0174D4C1DDB /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
 		5E27F0EAB62DE93BD6ACF636AEC00C63 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Sources/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		5F46C47FA49F5421A406C5FAA2670D56 /* FloatingBottomSheetContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetContainerView.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetContainerView.swift; sourceTree = "<group>"; };
 		5FE74755EA20CC37178EC1D5351EF390 /* Pods-MGActionSheet_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MGActionSheet_Example"; path = Pods_MGActionSheet_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A9C26CF4A195BB0E803CB7E8E81CB0 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Sources/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		694402BB50D503C74D7F445321C8EADC /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		6D4FFE5C4CA33E9BE20543E8103B8852 /* UIColor+Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Init.swift"; path = "Sources/FloatingBottomSheet/Utils/UIColor+Init.swift"; sourceTree = "<group>"; };
 		6DAB225E12186A7C9B7128219F666CB8 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		6DB846FDAB0FD76C43502CC81B14CD78 /* FloatingBottomSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingBottomSheet-umbrella.h"; sourceTree = "<group>"; };
 		7315C170BE26A5719F5EC566AA69405B /* MGAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGAction.swift; path = XMGActionSheet/Classes/MGAction.swift; sourceTree = "<group>"; };
-		7461C4D3D3437B5451A62DD97AA3A15C /* FloatingBottomSheetPresentable+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+Default.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+Default.swift"; sourceTree = "<group>"; };
 		7491B6C3DA27A0A7E77281D2D67EE5E2 /* XMGActionSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XMGActionSheet.modulemap; sourceTree = "<group>"; };
-		7515545C5F3D6B4F39D3023FED51053A /* FloatingBottomSheet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingBottomSheet-prefix.pch"; sourceTree = "<group>"; };
 		77712D2DDAB6516F708790D00AE4576B /* Pods-MGActionSheet_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MGActionSheet_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7B66E4535F543938FC7740CD6AE78167 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		80FFC29CA47A9CFB39607A20D3DFEA55 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
-		86ADAF92EC58A199F1ABC355FC3AA0D2 /* FloatingBottomSheetPresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentable.swift; path = Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable.swift; sourceTree = "<group>"; };
+		812C8BA3893F0936A3B246EDA0D4DA67 /* FloatingBottomSheetPresentationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationDelegate.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetPresentationDelegate.swift; sourceTree = "<group>"; };
+		845F475DA13A0E0A492BF6AE106CB17D /* FloatingBottomSheetAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetAnimator.swift; path = Sources/FloatingBottomSheet/Animator/FloatingBottomSheetAnimator.swift; sourceTree = "<group>"; };
+		85DFDC6A60350C5056F53CA428DB2219 /* FloatingBottomSheetPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresenter.swift; path = Sources/FloatingBottomSheet/Presenter/FloatingBottomSheetPresenter.swift; sourceTree = "<group>"; };
 		8C05E555B177AB1C702A37ADBFE4FC61 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		97667495CCB8F99C412E96F14D02D0B4 /* FloatingBottomSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheet.swift; path = Sources/FloatingBottomSheet/Presentable/FloatingBottomSheet.swift; sourceTree = "<group>"; };
+		8ED9045330A6FC44742B751A2FFFB817 /* UIColor+Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Init.swift"; path = "Sources/FloatingBottomSheet/Utils/UIColor+Init.swift"; sourceTree = "<group>"; };
+		930B39A7370AF21379738CF5C189A5F3 /* FloatingBottomSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingBottomSheet-dummy.m"; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98007041C0C97DF344608C9CD6F7155B /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		9A9F36CF6DA01172010265DE49A2B35D /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		9AA07C2F89744F2476D2F1A0F62AD1B4 /* Pods-MGActionSheet_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MGActionSheet_Tests.modulemap"; sourceTree = "<group>"; };
 		9B9612FD330E1096B19D4604B7A929B4 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		9D1F2483D452F026A011982CB756E9EE /* FloatingBottomSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingBottomSheet.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A263C08DC38F7709447A6DD554B070F1 /* FloatingBottomSheetPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresenter.swift; path = Sources/FloatingBottomSheet/Presenter/FloatingBottomSheetPresenter.swift; sourceTree = "<group>"; };
 		A4CDEFBBF3D9AA3CAB2D2AD7B7C18181 /* Pods-MGActionSheet_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGActionSheet_Example-Info.plist"; sourceTree = "<group>"; };
-		A8979EDB94BA465F3374036BCD3D33EF /* UIViewController+FloatingBottomSheetPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+FloatingBottomSheetPresenter.swift"; path = "Sources/FloatingBottomSheet/Presenter/UIViewController+FloatingBottomSheetPresenter.swift"; sourceTree = "<group>"; };
+		A99D139203870A76399455AD1C440885 /* FloatingBottomSheetContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetContainerView.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetContainerView.swift; sourceTree = "<group>"; };
 		AA291EC9CDE1E41F1EB26FBC931933E0 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Sources/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		AFEA4A7689EC65960D99D84963BDAF54 /* Pods-MGActionSheet_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MGActionSheet_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B10CF22203AC906E9DF7C4C5524F2C71 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Sources/Constraint.swift; sourceTree = "<group>"; };
 		B1DD9E90AE9E8F752AB2CB8727D9D3DB /* Pods-MGActionSheet_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MGActionSheet_Tests-Info.plist"; sourceTree = "<group>"; };
-		B2DA18444707999F2DD17E72BC8068A3 /* FloatingBottomSheet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingBottomSheet-umbrella.h"; sourceTree = "<group>"; };
-		B32423004B4D032D0C82457B2797E424 /* FloatingBottomSheetAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetAnimator.swift; path = Sources/FloatingBottomSheet/Animator/FloatingBottomSheetAnimator.swift; sourceTree = "<group>"; };
 		B9DCB5EC0B1CDADD221717CADDF62359 /* SnapKit-SnapKit_Privacy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SnapKit-SnapKit_Privacy"; path = SnapKit_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4759F57FC10A8562ECDD66880AB789 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = XMGActionSheet/Classes/Utils.swift; sourceTree = "<group>"; };
 		BCFE040C81442B8B3A1A847B4F71444E /* XMGActionSheet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMGActionSheet.release.xcconfig; sourceTree = "<group>"; };
@@ -215,30 +213,32 @@
 		C9B41DDB34B25B79154B45FA62FA1802 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Sources/ConstraintItem.swift; sourceTree = "<group>"; };
 		CA5CB9283820466732F020950ABA1D1D /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		CB79CDD727634210EDEBD912B46DF99F /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Sources/ConstraintMaker.swift; sourceTree = "<group>"; };
-		CD54889E92340A2639BAA33649BEF355 /* BottomSheetHandleMetric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BottomSheetHandleMetric.swift; path = Sources/FloatingBottomSheet/Presentation/BottomSheetHandleMetric.swift; sourceTree = "<group>"; };
 		CDA341020AC50847104A0BB9882395E9 /* MGActionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGActionCell.swift; path = XMGActionSheet/Classes/MGActionCell.swift; sourceTree = "<group>"; };
 		CEEF9D4F4A55CCA2F43A9797EE040B1D /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D295A84CB24038CAE4232900B7E47E1D /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Sources/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		D3B544C1A26E238389DD82D8C85A5D03 /* Pods-MGActionSheet_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MGActionSheet_Tests-dummy.m"; sourceTree = "<group>"; };
-		D67DD6B091C81D75DFB59626FCDB5E46 /* FloatingBottomSheetPresentationAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentationAnimator.swift; path = Sources/FloatingBottomSheet/Animator/FloatingBottomSheetPresentationAnimator.swift; sourceTree = "<group>"; };
 		D6A3DC226427EDFB689CA5DAF972A703 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Sources/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		D7941C71EA2164B4265596FE4A5A14ED /* XMGActionSheet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMGActionSheet-dummy.m"; sourceTree = "<group>"; };
+		E129FCCE5F52E8059F753B7CB9222665 /* FloatingBottomSheetPresentable+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+Default.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+Default.swift"; sourceTree = "<group>"; };
 		E35A998C7F899C7AD98EB51AF4500093 /* XMGActionSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMGActionSheet.debug.xcconfig; sourceTree = "<group>"; };
 		E4E886A5D6C412B339C68F97220313F4 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Sources/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		E601E930C644148E8889434CF6818544 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Sources/Debugging.swift; sourceTree = "<group>"; };
 		E645AA7A1C448F96FF470D0B190D5D4B /* XMGActionSheet */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XMGActionSheet; path = XMGActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7B1973EA3F0EDB7AF53C32DEDF4F51C /* FloatingBottomSheet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingBottomSheet-Info.plist"; sourceTree = "<group>"; };
+		E9FBCF4C9FB2E44C8D0E1F3F3904CAB0 /* FloatingBottomSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingBottomSheet.modulemap; sourceTree = "<group>"; };
+		EAB4BAA87E823AA9C465DF1468A167D0 /* FloatingBottomSheetPresentable+UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingBottomSheetPresentable+UIViewController.swift"; path = "Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable+UIViewController.swift"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		ED43D68E60231B23D1F27E8EDBADF551 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		EF56549D1054106CEC81C969063B6CAF /* Pods-MGActionSheet_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGActionSheet_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F0734422CBBA206BA991E21B5B124A66 /* Pods-MGActionSheet_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MGActionSheet_Example-umbrella.h"; sourceTree = "<group>"; };
 		F479E1B463E181638B8C26E0F3CDB51B /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Sources/ConstraintDSL.swift; sourceTree = "<group>"; };
+		F7A6490ACA953D7617227311A093BFD6 /* FloatingBottomSheetHandleMetric.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetHandleMetric.swift; path = Sources/FloatingBottomSheet/Presentation/FloatingBottomSheetHandleMetric.swift; sourceTree = "<group>"; };
 		F9D01A2D41BBC880AA7AABABEBDB5BB7 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Sources/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		FA01D51707A13B74DA2335DFE0D9EA02 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Sources/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		FB9C2657950FAA8DAEF67260BBC35102 /* FloatingBottomSheet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingBottomSheet.modulemap; sourceTree = "<group>"; };
 		FBA201994D6D2B79A880FA336FDF8F12 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		FC2AEC704A215BCED5C6FC2C3E087B18 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Sources/ConstraintConfig.swift; sourceTree = "<group>"; };
+		FC844C202B529CDBB86FBA9DD0BE2E22 /* UIViewController+FloatingBottomSheetPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+FloatingBottomSheetPresenter.swift"; path = "Sources/FloatingBottomSheet/Presenter/UIViewController+FloatingBottomSheetPresenter.swift"; sourceTree = "<group>"; };
+		FF0F6C7D7D40526546C6A088006DCC71 /* FloatingBottomSheetPresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingBottomSheetPresentable.swift; path = Sources/FloatingBottomSheet/Presentable/FloatingBottomSheetPresentable.swift; sourceTree = "<group>"; };
 		FF13736CAF296076FF8C4DC59F9FD84B /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Sources/ConstraintInsets.swift; sourceTree = "<group>"; };
 		FF7121811D86BB424344BF0130ACFA4B /* Pods-MGActionSheet_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MGActionSheet_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,10 +431,33 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		9D99D822AD6342A75B0831DAA89CD676 /* FloatingBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				03D9243CC15426575F72E42D82694A14 /* FloatingBottomSheet.swift */,
+				845F475DA13A0E0A492BF6AE106CB17D /* FloatingBottomSheetAnimator.swift */,
+				A99D139203870A76399455AD1C440885 /* FloatingBottomSheetContainerView.swift */,
+				F7A6490ACA953D7617227311A093BFD6 /* FloatingBottomSheetHandleMetric.swift */,
+				FF0F6C7D7D40526546C6A088006DCC71 /* FloatingBottomSheetPresentable.swift */,
+				E129FCCE5F52E8059F753B7CB9222665 /* FloatingBottomSheetPresentable+Default.swift */,
+				5B440E48174A36F2FF6F687E7A525F22 /* FloatingBottomSheetPresentable+Internal.swift */,
+				EAB4BAA87E823AA9C465DF1468A167D0 /* FloatingBottomSheetPresentable+UIViewController.swift */,
+				4CDB4A68341835128C7A305054BA8576 /* FloatingBottomSheetPresentationAnimator.swift */,
+				4A7F4E94D5E8CCDF908FF97EBA806D92 /* FloatingBottomSheetPresentationController.swift */,
+				812C8BA3893F0936A3B246EDA0D4DA67 /* FloatingBottomSheetPresentationDelegate.swift */,
+				85DFDC6A60350C5056F53CA428DB2219 /* FloatingBottomSheetPresenter.swift */,
+				8ED9045330A6FC44742B751A2FFFB817 /* UIColor+Init.swift */,
+				FC844C202B529CDBB86FBA9DD0BE2E22 /* UIViewController+FloatingBottomSheetPresenter.swift */,
+				C269DDA3DBE48E0B267555ACDCAF6BFC /* Support Files */,
+			);
+			name = FloatingBottomSheet;
+			path = FloatingBottomSheet;
+			sourceTree = "<group>";
+		};
 		A505B5DD328A437B5FE67D6A07E9C066 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E48203B49DFBC6D46CD32CD97071664A /* FloatingBottomSheet */,
+				9D99D822AD6342A75B0831DAA89CD676 /* FloatingBottomSheet */,
 				4341A9D7E9BA4D78E3FFD2524AA9D5EE /* SnapKit */,
 			);
 			name = Pods;
@@ -455,6 +478,21 @@
 			);
 			name = XMGActionSheet;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		C269DDA3DBE48E0B267555ACDCAF6BFC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9FBCF4C9FB2E44C8D0E1F3F3904CAB0 /* FloatingBottomSheet.modulemap */,
+				930B39A7370AF21379738CF5C189A5F3 /* FloatingBottomSheet-dummy.m */,
+				49EA688BC548AB3291AFEDB922C87017 /* FloatingBottomSheet-Info.plist */,
+				1353D365901E22A587366563BDF8CD7B /* FloatingBottomSheet-prefix.pch */,
+				6DB846FDAB0FD76C43502CC81B14CD78 /* FloatingBottomSheet-umbrella.h */,
+				2F849C651E0E7708F6CB8444379335FA /* FloatingBottomSheet.debug.xcconfig */,
+				27DD8E91E5C3A7224D5057D196F6F4DF /* FloatingBottomSheet.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FloatingBottomSheet";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -482,44 +520,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/XMGActionSheet";
-			sourceTree = "<group>";
-		};
-		D59AD3F65488E566F592B2427167D213 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FB9C2657950FAA8DAEF67260BBC35102 /* FloatingBottomSheet.modulemap */,
-				29617D42E6EF33BF9DEB2C51DA9B02D8 /* FloatingBottomSheet-dummy.m */,
-				E7B1973EA3F0EDB7AF53C32DEDF4F51C /* FloatingBottomSheet-Info.plist */,
-				7515545C5F3D6B4F39D3023FED51053A /* FloatingBottomSheet-prefix.pch */,
-				B2DA18444707999F2DD17E72BC8068A3 /* FloatingBottomSheet-umbrella.h */,
-				43ECF06B56F6F55CB977601BBDD19C61 /* FloatingBottomSheet.debug.xcconfig */,
-				9D1F2483D452F026A011982CB756E9EE /* FloatingBottomSheet.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FloatingBottomSheet";
-			sourceTree = "<group>";
-		};
-		E48203B49DFBC6D46CD32CD97071664A /* FloatingBottomSheet */ = {
-			isa = PBXGroup;
-			children = (
-				CD54889E92340A2639BAA33649BEF355 /* BottomSheetHandleMetric.swift */,
-				97667495CCB8F99C412E96F14D02D0B4 /* FloatingBottomSheet.swift */,
-				B32423004B4D032D0C82457B2797E424 /* FloatingBottomSheetAnimator.swift */,
-				5F46C47FA49F5421A406C5FAA2670D56 /* FloatingBottomSheetContainerView.swift */,
-				86ADAF92EC58A199F1ABC355FC3AA0D2 /* FloatingBottomSheetPresentable.swift */,
-				7461C4D3D3437B5451A62DD97AA3A15C /* FloatingBottomSheetPresentable+Default.swift */,
-				063C35ED75B543C4FD8183FF2CDBD8D8 /* FloatingBottomSheetPresentable+Internal.swift */,
-				42E0F913D94B5CDE19AD8A8BE8470C80 /* FloatingBottomSheetPresentable+UIViewController.swift */,
-				D67DD6B091C81D75DFB59626FCDB5E46 /* FloatingBottomSheetPresentationAnimator.swift */,
-				29AFE74496C5F1C5E92EE3888EED7883 /* FloatingBottomSheetPresentationController.swift */,
-				0780D5D8047298C153F4DC45450ECC1F /* FloatingBottomSheetPresentationDelegate.swift */,
-				A263C08DC38F7709447A6DD554B070F1 /* FloatingBottomSheetPresenter.swift */,
-				6D4FFE5C4CA33E9BE20543E8103B8852 /* UIColor+Init.swift */,
-				A8979EDB94BA465F3374036BCD3D33EF /* UIViewController+FloatingBottomSheetPresenter.swift */,
-				D59AD3F65488E566F592B2427167D213 /* Support Files */,
-			);
-			name = FloatingBottomSheet;
-			path = FloatingBottomSheet;
 			sourceTree = "<group>";
 		};
 		EEB17FB8025D40D46A86833CD92600D6 /* Targets Support Files */ = {
@@ -617,7 +617,7 @@
 			buildConfigurationList = 72588EC651DEC5CE3B22DA1967130D1B /* Build configuration list for PBXNativeTarget "FloatingBottomSheet" */;
 			buildPhases = (
 				D24C0D4DFBDB89E394EFC3EB8B62FF05 /* Headers */,
-				6223EC0BA23D5F879F38CF19D423D7D3 /* Sources */,
+				70B44E497DDAD89A9978CDE8579B4BA3 /* Sources */,
 				7274BCEBFF99B7AD9F82D3852A31C461 /* Frameworks */,
 				40777BEFFFDE07398D3C2789929CFE9A /* Resources */,
 			);
@@ -801,33 +801,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6223EC0BA23D5F879F38CF19D423D7D3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7D9672222B184DF5CA6C516BB4E85479 /* BottomSheetHandleMetric.swift in Sources */,
-				74BD9FFE240CD85E9102A69C952B6F55 /* FloatingBottomSheet.swift in Sources */,
-				FA071DBC88D34E1CD5E019ACCEC08283 /* FloatingBottomSheet-dummy.m in Sources */,
-				E7DE4ED02EA542849366FD5D35E01B16 /* FloatingBottomSheetAnimator.swift in Sources */,
-				8C9CE09D7434EEC5DFB1F2B7ABE93CAF /* FloatingBottomSheetContainerView.swift in Sources */,
-				BEF18AE3DA7E2D266CC7A857CB3FDFAE /* FloatingBottomSheetPresentable.swift in Sources */,
-				BF2EA5170D3E09F669D572FC740FDC4D /* FloatingBottomSheetPresentable+Default.swift in Sources */,
-				737AB2682BF9BA7F1AF729DA547810D5 /* FloatingBottomSheetPresentable+Internal.swift in Sources */,
-				DA65F5DCFFEE1B2DFFD228BE6CDA8875 /* FloatingBottomSheetPresentable+UIViewController.swift in Sources */,
-				C54CDD3B7E5A82863E41A2D0EE033B0E /* FloatingBottomSheetPresentationAnimator.swift in Sources */,
-				F8B245B2E8FFC29057680EA9DECF60E6 /* FloatingBottomSheetPresentationController.swift in Sources */,
-				21DDDC1F0F179B23F5175D08B0FE6A0A /* FloatingBottomSheetPresentationDelegate.swift in Sources */,
-				E836966C8D0AA34B656B2D95C276BC4A /* FloatingBottomSheetPresenter.swift in Sources */,
-				1BF5A1C4F29715BE9482C107C05F41B4 /* UIColor+Init.swift in Sources */,
-				D268FA13A4A5082E97FB1378D92EF992 /* UIViewController+FloatingBottomSheetPresenter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E2B7C5F2940DACA0ADFF51FE4CB4642 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9269982911E3A9FCD66676B71EC22364 /* Pods-MGActionSheet_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70B44E497DDAD89A9978CDE8579B4BA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E530C71E07DA68CF26A0F3A80BC1D849 /* FloatingBottomSheet.swift in Sources */,
+				B477ADCD18E0D59139A7F3DB90D312AC /* FloatingBottomSheet-dummy.m in Sources */,
+				B2A5BDD266D93A90ED62E27664115121 /* FloatingBottomSheetAnimator.swift in Sources */,
+				02E3D284ABEC2974E55313AF31BA0FBC /* FloatingBottomSheetContainerView.swift in Sources */,
+				DF3CAC36D17F1AE872372958262B79B5 /* FloatingBottomSheetHandleMetric.swift in Sources */,
+				3417D18D13B705E68936F2FB3BCD0AAB /* FloatingBottomSheetPresentable.swift in Sources */,
+				C98D7B2E750BFF02985F0E08F37A7BCC /* FloatingBottomSheetPresentable+Default.swift in Sources */,
+				AB5744158B6CEBB316C485A0964D7B5E /* FloatingBottomSheetPresentable+Internal.swift in Sources */,
+				2D83B7EA206E844A6DCD323174799F3A /* FloatingBottomSheetPresentable+UIViewController.swift in Sources */,
+				C0B8B3BCBFF7B9E562B1EEB0D3770040 /* FloatingBottomSheetPresentationAnimator.swift in Sources */,
+				2192E2C0D4320864B47A4FE07F11575B /* FloatingBottomSheetPresentationController.swift in Sources */,
+				045E876A1744E35A6985CA4B4145CC29 /* FloatingBottomSheetPresentationDelegate.swift in Sources */,
+				120A33BBA9CFE18820CD2ACD8DCA4533 /* FloatingBottomSheetPresenter.swift in Sources */,
+				435213327CAD477B2FF8C07F8E1405FE /* UIColor+Init.swift in Sources */,
+				3F32FEFD9317BB775ED5F8A192F107F8 /* UIViewController+FloatingBottomSheetPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1365,7 +1365,7 @@
 		};
 		C46B22E211B71F81430B25D75D675823 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43ECF06B56F6F55CB977601BBDD19C61 /* FloatingBottomSheet.debug.xcconfig */;
+			baseConfigurationReference = 2F849C651E0E7708F6CB8444379335FA /* FloatingBottomSheet.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1397,7 +1397,7 @@
 		};
 		E15C3BE005FEE7D919DC4709FE5EBB1D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D1F2483D452F026A011982CB756E9EE /* FloatingBottomSheet.release.xcconfig */;
+			baseConfigurationReference = 27DD8E91E5C3A7224D5057D196F6F4DF /* FloatingBottomSheet.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
