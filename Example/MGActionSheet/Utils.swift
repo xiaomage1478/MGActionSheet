@@ -8,5 +8,7 @@
 
 import UIKit
 
+@MainActor
 let kScreenWidth = UIScreen.main.bounds.width
+@MainActor
 let kScreenHeight = UIScreen.main.bounds.height
