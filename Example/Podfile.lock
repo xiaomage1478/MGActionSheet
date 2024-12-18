@@ -1,7 +1,7 @@
 PODS:
   - FloatingBottomSheet (2.3.0)
   - SnapKit (5.7.1)
-  - XMGActionSheet (0.2.2):
+  - XMGActionSheet (0.2.3):
     - FloatingBottomSheet
 
 DEPENDENCIES:
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FloatingBottomSheet: db2ad307ca88205776d53d75c4d4bcc87cde1d06
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
-  XMGActionSheet: 1720a8498ae46ff6d2ea76d62bd9d0f65f3f1331
+  XMGActionSheet: 283e6d17e5e28028cfbe6a0f3947f1d017b9ca8c
 
 PODFILE CHECKSUM: 10ad9d6c1ef9f26bcce8c1232745edb34b6cbfd1
 
