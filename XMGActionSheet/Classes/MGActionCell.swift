@@ -1,3 +1,4 @@
+import FloatingBottomSheet
 
 class MGActionCell: UITableViewCell {
     lazy var titleLab: UILabel = {
@@ -226,4 +227,13 @@ class MGCancelActionCell: UITableViewCell {
             contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: data.config.actionMinHeight - 20)
         ])
     }
+}
+
+
+public protocol MGTitleViewType: UIView {
+    var viewController: FloatingBottomSheet? { set get }
+}
+
+public class MGTitleView: UIView, MGTitleViewType {
+    public weak var viewController: (any FloatingBottomSheet)?
 }
