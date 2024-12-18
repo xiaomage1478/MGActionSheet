@@ -1,4 +1,4 @@
-@MainActor
+
 open class MGAction: NSObject {
     open private(set) var title: String?
     open private(set) var subTitle: String?
@@ -44,7 +44,7 @@ open class MGAction: NSObject {
 public extension MGAction {
     
     /// Action 样式，cacel 只能有一个，且只展示在最下方，添加多个默认展示第一个添加的
-    @MainActor enum Style: Int {
+     enum Style: Int {
         case `default` = 0
         case cancel = 1
         case destructive = 2
@@ -52,7 +52,7 @@ public extension MGAction {
 }
 
 public extension MGAction.Style {
-    @MainActor 
+     
     /// Style 的默认样式配置， 可通过 MGAction 的 config 属性覆盖
     var config: MGActionConfig {
         switch self {

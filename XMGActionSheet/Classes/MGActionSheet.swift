@@ -49,8 +49,8 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         fatalError("init(coder:) has not been implemented")
     }
     
-    public var titleView: UIView = {
-        let view = UIView()
+    public var titleView: any MGTitleViewType = {
+        let view = MGTitleView()
         view.isHidden = true
         return view
     }()
@@ -105,6 +105,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     }
 
     private func setupTableView() {
+        titleView.viewController = self
         view.addSubview(contentStack)
         titleView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

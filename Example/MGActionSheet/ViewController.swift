@@ -9,6 +9,7 @@
 import XMGActionSheet
 import UIKit
 import SnapKit
+import FloatingBottomSheet
 
 public class BaseView: UIView {
     
@@ -27,9 +28,8 @@ public class BaseView: UIView {
     
 }
 
-class MGTitleView: BaseView {
-    
-    
+class MGTitleView: BaseView, MGTitleViewType {
+    var viewController: (any FloatingBottomSheet)?
     
     typealias SheetAction = () -> Void
     
@@ -78,6 +78,7 @@ class MGTitleView: BaseView {
     lazy var closeButton = UIButton().then {
         $0.setImage(UIImage(systemName: "xmark"), for: .normal)
         $0.tintColor = .black
+        $0.addTarget(self, action: #selector(closeTap), for: .touchUpInside)
 //        $0.hitTestEdgeInsets = UIEdgeInsets(horizontal: -44, vertical: -44)
     }
     
@@ -135,6 +136,11 @@ class MGTitleView: BaseView {
 //                self?.confirmAction?()
 //            })
 //            .disposed(by: disposeBag)
+    }
+    
+    @objc func closeTap() {
+        closeAction?()
+        viewController?.dismiss(animated: true)
     }
 }
 
