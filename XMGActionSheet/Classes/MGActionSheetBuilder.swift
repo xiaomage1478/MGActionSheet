@@ -4,7 +4,7 @@ public class MGActionSheetBuilder {
     private var backgroundColor: UIColor = MGGlobalUIConfig.shared.backgroundColor
     private var bottomSheetCornerRadius: CGFloat = 10
     private var titleViewHeight: CGFloat = 0
-    private var titleView: (any MGTitleViewType)? = nil
+    private var titleView: MGTitleViewType? = nil
     
     public init() {}
 
@@ -62,7 +62,7 @@ public class MGActionSheetBuilder {
     }
     
     @discardableResult
-    public func setTitleView(_ view: (any MGTitleViewType)?) -> MGActionSheetBuilder {
+    public func setTitleView(_ view: MGTitleViewType?) -> MGActionSheetBuilder {
         titleView = view
         return self
     }

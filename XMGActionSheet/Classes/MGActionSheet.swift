@@ -49,7 +49,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         fatalError("init(coder:) has not been implemented")
     }
     
-    public var titleView: any MGTitleViewType = {
+    public var titleView: MGTitleViewType = {
         let view = MGTitleView()
         view.isHidden = true
         return view
