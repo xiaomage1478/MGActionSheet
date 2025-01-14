@@ -1,6 +1,6 @@
 {
   "name": "XMGActionSheet",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "summary": "MGActionSheet. 一款仿微信底部弹框，支持高度自定义",
   "homepage": "https://github.com/xiaomage1478/MGActionSheet",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/xiaomage1478/MGActionSheet.git",
-    "tag": "0.2.5"
+    "tag": "0.2.6"
   },
   "platforms": {
     "ios": "13.0"
