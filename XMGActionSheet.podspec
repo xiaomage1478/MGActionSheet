@@ -8,9 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XMGActionSheet'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'MGActionSheet. 一款仿微信底部弹框，支持高度自定义'
-
+  s.description      = <<-DESC
+                       MGActionSheet. 一款仿微信底部弹框，支持高度自定义
+                       支持 cocoapods、SPM
+                       DESC
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -21,12 +24,12 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '小马哥' => '354938940@qq.com' }
-  s.source           = { :git => 'https://github.com/xiaomage1478/MGActionSheet.git', :tag => "#{s.version}" }
+  s.source           = { :git => 'https://github.com/xiaomage1478/MGActionSheet.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
   s.swift_versions = '5.0'
-  s.source_files = 'Sources/XMGActionSheet/**/*.{swift,h,m}'
+  s.source_files = 'XMGActionSheet/**/*'
   
   # s.resource_bundles = {
   #   'MGActionSheet' => ['MGActionSheet/Assets/*.png']
