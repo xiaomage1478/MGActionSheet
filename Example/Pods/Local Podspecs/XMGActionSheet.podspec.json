@@ -1,6 +1,6 @@
 {
   "name": "XMGActionSheet",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "MGActionSheet. 一款仿微信底部弹框，支持高度自定义",
   "description": "MGActionSheet. 一款仿微信底部弹框，支持高度自定义\n支持 cocoapods、SPM",
   "homepage": "https://github.com/xiaomage1478/MGActionSheet",
@@ -13,13 +13,13 @@
   },
   "source": {
     "git": "https://github.com/xiaomage1478/MGActionSheet.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "platforms": {
     "ios": "13.0"
   },
   "swift_versions": "5.0",
-  "source_files": "XMGActionSheet/**/*",
+  "source_files": "Sources/**/*",
   "dependencies": {
     "FloatingBottomSheet": [
 
