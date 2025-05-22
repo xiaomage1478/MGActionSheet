@@ -76,6 +76,10 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
+        tableView.alwaysBounceVertical = false
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: Ces.width, height: Ces.bottomSafeAreaHeight))
         return tableView
     }()
@@ -107,7 +111,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     private func setupTableView() {
         titleView.viewController = self
         view.addSubview(contentStack)
-        titleView.translatesAutoresizingMaskIntoConstraints = false
+//        titleView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentStack.topAnchor.constraint(equalTo: view.topAnchor),
             contentStack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -115,10 +119,10 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
             contentStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomInset)
         ])
         tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: 50)
-        tableView.tableHeaderView = titleView
+//        tableView.tableHeaderView = titleView
         NSLayoutConstraint.activate([
             tableViewHeightConstraint!,
-            titleView.heightAnchor.constraint(equalToConstant: titleViewHeight)
+//            titleView.heightAnchor.constraint(equalToConstant: titleViewHeight)
         ])
         
         tableView.reloadData()
@@ -138,6 +142,14 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
         actions.count
     }
     
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return titleViewHeight > 0 ? titleView : nil
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return titleViewHeight
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let action = actions[indexPath.row]
         
@@ -145,29 +157,25 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
         backgroudView.backgroundColor = action.config.selectionBackgroundColor
         
         if action.style == .cancel {
-            guard let cancelCell = tableView.dequeueReusableCell(withIdentifier: cellCancelID, for: indexPath) as? MGCancelActionCell else {
-                return UITableViewCell()
-            }
+            let cancelCell = tableView.dequeueReusableCell(withIdentifier: cellCancelID, for: indexPath) as! MGCancelActionCell
             cancelCell.selectedBackgroundView = backgroudView
             cancelCell.config(action)
             return cancelCell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuserID, for: indexPath) as! MGActionCell
+            cell.selectionStyle = action.isEnabled ? .default : .none
+            cell.selectedBackgroundView = backgroudView
+            
+            var lastIndex = actions.count - 1
+            if let cancelIndex = actions.firstIndex(where: { $0.style == .cancel }) {
+                lastIndex = cancelIndex - 1
+            }
+            
+            cell.bottomLine.isHidden = indexPath.row == lastIndex
+            cell.config(action)
+            return cell
         }
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuserID, for: indexPath) as? MGActionCell else {
-            return UITableViewCell()
-        }
-        
-        cell.selectionStyle = action.isEnabled ? .default : .none
-        cell.selectedBackgroundView = backgroudView
-        
-        var lastIndex = actions.count - 1
-        if let cancelIndex = actions.firstIndex(where: { $0.style == .cancel }) {
-            lastIndex = cancelIndex - 1
-        }
-        
-        cell.bottomLine.isHidden = indexPath.row == lastIndex
-        cell.config(action)
-        return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

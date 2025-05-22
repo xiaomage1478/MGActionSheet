@@ -1,98 +1,99 @@
 import FloatingBottomSheet
 import UIKit
 class MGActionCell: UITableViewCell {
-    lazy var titleLab: UILabel = {
-        let view = UILabel()
-        view.textAlignment = .center
-        view.numberOfLines = 0
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    // MARK: - UI Components
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
-    lazy var subtitleLab: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.textAlignment = .center
-        view.numberOfLines = 0
-        return view
+    private let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
-    lazy var bottomLine: UIView = {
+    let bottomLine: UIView = {
         let view = UIView()
+        view.backgroundColor = UIColor(red: 0.91, green: 0.91, blue: 0.91, alpha: 1.0)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.9098039216, green: 0.9098039216, blue: 0.9098039216, alpha: 1)
         return view
     }()
     
-    lazy var contentStack: UIStackView = {
+    private let stackView: UIStackView = {
         let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.addArrangedSubview(titleLab)
-        stack.addArrangedSubview(subtitleLab)
         stack.axis = .vertical
         stack.spacing = 4
         stack.alignment = .center
         stack.distribution = .fill
-        return stack
-    }()
-    
-    lazy var contentHStack: UIStackView = {
-        let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.addArrangedSubview(contentStack)
-        stack.axis = .horizontal
-        stack.spacing = 0
-        stack.alignment = .center
-        stack.distribution = .fill
         return stack
     }()
     
+    // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
     
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
+    // MARK: - Setup
+    private func setupUI() {
         contentView.backgroundColor = .white
-        contentView.addSubview(contentHStack)
+        
+        // 添加视图
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(subtitleLabel)
+        contentView.addSubview(stackView)
         contentView.addSubview(bottomLine)
         
+        // 设置约束
         NSLayoutConstraint.activate([
-            contentHStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: 50)
-        ])
-        
-        NSLayoutConstraint.activate([
+            // StackView 约束
+            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -20),
+            stackView.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: 10),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10),
+            
+            // 底部线约束
             bottomLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             bottomLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            bottomLine.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
-            bottomLine.heightAnchor.constraint(equalToConstant: Ces.px1)
+            bottomLine.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            bottomLine.heightAnchor.constraint(equalToConstant: 1.0 / UIScreen.main.scale),
+            
+            // 确保最小高度
+            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
         ])
     }
     
+    // MARK: - Configuration
     func config(_ data: MGAction) {
+        titleLabel.text = data.title
+        subtitleLabel.text = data.subTitle
+        
+        // 应用自定义样式
+        titleLabel.textColor = data.config.titleColor
+        titleLabel.font = data.config.titleFont
+        subtitleLabel.textColor = data.config.subtitleColor
+        subtitleLabel.font = data.config.subtitleFont
+        stackView.spacing = data.config.spacing
         contentView.backgroundColor = data.config.backgroundColor
-        /// 标题配置
-        titleLab.text = data.title
-        titleLab.textColor = data.config.titleColor
-        titleLab.font = data.config.titleFont
         
-        /// 小标题配置
-        subtitleLab.text = data.subTitle
-        subtitleLab.textColor = data.config.subtitleColor
-        subtitleLab.font = data.config.subtitleFont
-        
-        contentStack.spacing = data.config.spacing
-        
-        /// 分割线配置
+        // 更新分割线样式
         bottomLine.backgroundColor = data.config.separatorColor
         NSLayoutConstraint.deactivate(bottomLine.constraints)
         NSLayoutConstraint.activate([
@@ -102,133 +103,117 @@ class MGActionCell: UITableViewCell {
             bottomLine.heightAnchor.constraint(equalToConstant: data.config.separatorHeight)
         ])
         
-        /// 配置高度
-        NSLayoutConstraint.deactivate(contentHStack.constraints)
-        NSLayoutConstraint.activate([
-            contentHStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: data.config.actionMinHeight - 20)
-        ])
+        // 更新最小高度
+        contentView.constraints.first { $0.firstAttribute == .height }?.constant = data.config.actionMinHeight
     }
 }
 
 class MGCancelActionCell: UITableViewCell {
-    lazy var titleLab: UILabel = {
-        let view = UILabel()
-        view.textAlignment = .center
-        view.numberOfLines = 0
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    // MARK: - UI Components
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
-    lazy var subtitleLab: UILabel = {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.textAlignment = .center
-        view.numberOfLines = 0
-        return view
+    private let subtitleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
-    lazy var topLine: UIView = {
+    private let topLine: UIView = {
         let view = UIView()
+        view.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.96, alpha: 1.0)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9529411765, blue: 0.9647058824, alpha: 1)
         return view
     }()
     
-    lazy var contentStack: UIStackView = {
+    private let stackView: UIStackView = {
         let stack = UIStackView()
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.addArrangedSubview(titleLab)
-        stack.addArrangedSubview(subtitleLab)
         stack.axis = .vertical
         stack.spacing = 4
         stack.alignment = .center
         stack.distribution = .fill
-        return stack
-    }()
-    
-    lazy var contentHStack: UIStackView = {
-        let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.addArrangedSubview(contentStack)
-        stack.axis = .horizontal
-        stack.spacing = 0
-        stack.alignment = .center
-        stack.distribution = .fill
         return stack
     }()
     
+    // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
     
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupUI() {
-        contentView.addSubview(contentHStack)
+    // MARK: - Setup
+    private func setupUI() {
+        contentView.backgroundColor = .white
+        
+        // 添加视图
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(subtitleLabel)
         contentView.addSubview(topLine)
+        contentView.addSubview(stackView)
         
+        // 设置约束
         NSLayoutConstraint.activate([
-            topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
-            topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -0),
-            topLine.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -0.5),
-            topLine.heightAnchor.constraint(equalToConstant: 5)
+            // 顶部线约束
+            topLine.topAnchor.constraint(equalTo: contentView.topAnchor),
+            topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            topLine.heightAnchor.constraint(equalToConstant: 5),
+            
+            // StackView 约束
+            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            stackView.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -20),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            
+            // 确保最小高度
+            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
         ])
-        
-        NSLayoutConstraint.activate([
-            contentHStack.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: 10),
-            contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: 50)
-        ])
-        
     }
     
+    // MARK: - Configuration
     func config(_ data: MGAction) {
+        titleLabel.text = data.title
+        subtitleLabel.text = data.subTitle
+        
+        // 应用自定义样式
+        titleLabel.textColor = data.config.titleColor
+        titleLabel.font = data.config.titleFont
+        subtitleLabel.textColor = data.config.subtitleColor
+        subtitleLabel.font = data.config.subtitleFont
+        stackView.spacing = data.config.spacing
         contentView.backgroundColor = data.config.backgroundColor
         
-        titleLab.text = data.title
-        titleLab.textColor = data.config.titleColor
-        titleLab.font = data.config.titleFont
-        
-        subtitleLab.text = data.subTitle
-        subtitleLab.textColor = data.config.subtitleColor
-        subtitleLab.font = data.config.subtitleFont
-        
-        contentStack.spacing = data.config.spacing
-        
-        /// 分割线配置
+        // 更新顶部线样式
         topLine.backgroundColor = data.config.cancelSeparatorColor
-        topLine.setContentHuggingPriority(.required, for: .vertical)
-        topLine.setContentCompressionResistancePriority(.required, for: .vertical)
         NSLayoutConstraint.deactivate(topLine.constraints)
         NSLayoutConstraint.activate([
-            topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
-            topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -0),
-            topLine.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -0.5),
+            topLine.topAnchor.constraint(equalTo: contentView.topAnchor),
+            topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             topLine.heightAnchor.constraint(equalToConstant: data.config.cancelSeparatorHeight)
         ])
         
-        /// 配置高度
-        NSLayoutConstraint.deactivate(contentHStack.constraints)
-        NSLayoutConstraint.activate([
-            contentHStack.topAnchor.constraint(equalTo: topLine.bottomAnchor, constant: 10),
-            contentHStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            contentHStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
-            contentHStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            contentHStack.heightAnchor.constraint(greaterThanOrEqualToConstant: data.config.actionMinHeight - 20)
-        ])
+        // 更新最小高度
+        contentView.constraints.first { $0.firstAttribute == .height }?.constant = data.config.actionMinHeight
     }
 }
-
 
 public protocol MGTitleViewType: UIView {
     var viewController: FloatingBottomSheet? { set get }

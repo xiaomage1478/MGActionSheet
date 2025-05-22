@@ -192,10 +192,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func subtitleStyle(_ sender: Any) {
+        let titleView  = MGTitleView().then {
+            $0.setTitle("提醒")
+            $0.showBottomLine = true
+            $0.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 70)
+        }
         MGActionSheetBuilder()
             .addAction(title: "拍摄", subtitle: "照片或视频", style: .default)
-            .addAction(title: "从手机相册选择", style: .default)
-            .addCancleAction()
+            .addAction(title: "从手机相册选择1", style: .default)
+            .addAction(title: "从手机相册选择2", style: .default)
+            .addAction(title: "从手机相册选择3", style: .default)
+            .addAction(title: "从手机相册选择4", style: .default)
+            .addAction(title: "从手机相册选择5", style: .default)
+            .addAction(title: "从手机相册选择6", style: .default)
+            .addAction(title: "从手机相册选择7", style: .default)
+            .addAction(title: "从手机相册选择8", style: .default)
+            .addAction(title: "从手机相册选择9", style: .default)
+            .addAction(title: "从手机相册选择10", style: .default)
+            .addAction(title: "从手机相册选择11", style: .default)
+            .addAction(title: "从手机相册选择12", style: .default)
+            .addAction(title: "从手机相册选择13", style: .default)
+            .addAction(title: "从手机相册选择14", style: .default)
+            .addAction(title: "从手机相册选择15", style: .default)
+            .addAction(title: "从手机相册选择16", style: .default)
+            .addAction(title: "从手机相册选择17", style: .default)
+            .addAction(title: "从手机相册选择18", style: .default)
+            .addAction(title: "从手机相册选择19", style: .default)
+            .addAction(title: "从手机相册选择20", style: .default)
+            .addAction(title: "从手机相册选择21", style: .default)
+            .addAction(title: "从手机相册选择22", style: .default)
+//            .addCancleAction()
+            .setTitleViewHeight(70)
+            .setTitleView(titleView)
             .build()
     }
     
