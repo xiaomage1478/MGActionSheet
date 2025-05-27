@@ -1,28 +1,16 @@
 PODS:
-  - FloatingBottomSheet (2.3.0)
   - SnapKit (5.7.1)
-  - XMGActionSheet (1.0.3):
-    - FloatingBottomSheet
 
 DEPENDENCIES:
-  - FloatingBottomSheet
   - SnapKit
-  - XMGActionSheet (from `../`)
 
 SPEC REPOS:
   trunk:
-    - FloatingBottomSheet
     - SnapKit
 
-EXTERNAL SOURCES:
-  XMGActionSheet:
-    :path: "../"
-
 SPEC CHECKSUMS:
-  FloatingBottomSheet: db2ad307ca88205776d53d75c4d4bcc87cde1d06
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
-  XMGActionSheet: cb2ff562c0bbc42e28a27ddc92369d8f808e446e
 
-PODFILE CHECKSUM: 5ec26730382d8d7c8cb94089c917a3ee7428c7c1
+PODFILE CHECKSUM: 94d4042e8b31c374e55ab3cb0f3457d7295a944f
 
 COCOAPODS: 1.16.2

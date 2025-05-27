@@ -106,6 +106,13 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
             newActions = newActions.filter { $0.style != .cancel } + [cancelAction]
         }
         actions = newActions
+        
+        actions.forEach { action in
+            if case .custom(let cellType) = action.style {
+                tableView.register(cellType, forCellReuseIdentifier: cellType.reuseCellId)
+            }
+        }
+        
     }
 
     private func setupTableView() {
@@ -152,25 +159,39 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let action = actions[indexPath.row]
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = action.config.selectionBackgroundColor
         
-        let backgroudView = UIView()
-        backgroudView.backgroundColor = action.config.selectionBackgroundColor
-        
-        if action.style == .cancel {
-            let cancelCell = tableView.dequeueReusableCell(withIdentifier: cellCancelID, for: indexPath) as! MGCancelActionCell
-            cancelCell.selectedBackgroundView = backgroudView
-            cancelCell.config(action)
-            return cancelCell
-        } else {
+        switch action.style {
+        case .cancel:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellCancelID, for: indexPath) as! MGCancelActionCell
+            cell.selectedBackgroundView = backgroundView
+            cell.config(action)
+            return cell
+            
+        case .custom(let cellType):
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellType.reuseCellId, for: indexPath)
+            if let customCell = cell as? CustomCellProvider {
+                var lastIndex = actions.count - 1
+                if let cancelIndex = actions.firstIndex(where: { $0.style == .cancel }) {
+                    lastIndex = cancelIndex - 1
+                }
+                customCell.bottomLine.isHidden = indexPath.row == lastIndex
+                customCell.config(action)
+            }
+            
+            cell.selectedBackgroundView = backgroundView
+            return cell
+            
+        default:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellReuserID, for: indexPath) as! MGActionCell
             cell.selectionStyle = action.isEnabled ? .default : .none
-            cell.selectedBackgroundView = backgroudView
-            
+            cell.selectedBackgroundView = backgroundView
             var lastIndex = actions.count - 1
             if let cancelIndex = actions.firstIndex(where: { $0.style == .cancel }) {
                 lastIndex = cancelIndex - 1
             }
-            
             cell.bottomLine.isHidden = indexPath.row == lastIndex
             cell.config(action)
             return cell

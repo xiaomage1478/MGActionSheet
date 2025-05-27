@@ -15,10 +15,12 @@ public class MGActionSheetBuilder {
                           style: MGAction.Style,
                           config: MGActionConfig? = nil,
                           isEnable: Bool = true,
+                          customParam: Any? = nil,
                           handler: ((MGAction) -> Void)? = nil) -> MGActionSheetBuilder
     {
         guard isShow else { return self }
         let action = MGAction(title: title, subTitle: subtitle, style: style, config: config, handler: handler)
+        action.customParam = customParam
         action.isEnabled = isEnable
         actions.append(action)
         return self

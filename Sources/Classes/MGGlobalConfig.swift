@@ -60,4 +60,6 @@ public class MGGlobalAction {
      public var destructiveAction: MGActionConfig = .init(titleColor: .red, titleFont: .systemFont(ofSize: 16))
     /// 全局配置取消按钮的 Action 样式
      public var cancelAction: MGActionConfig = .init(titleFont: .systemFont(ofSize: 16))
+     public var defaultCustomAction: MGActionConfig = .init()
+
 }

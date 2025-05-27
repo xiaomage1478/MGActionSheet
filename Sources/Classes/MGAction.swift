@@ -5,6 +5,7 @@ open class MGAction: NSObject {
     open private(set) var style: MGAction.Style
     open var isEnabled: Bool
     open var config: MGActionConfig
+    open var customParam: Any?
 
     var handle: ((MGAction) -> Void)?
 
@@ -44,14 +45,37 @@ open class MGAction: NSObject {
 public extension MGAction {
     
     /// Action 样式，cacel 只能有一个，且只展示在最下方，添加多个默认展示第一个添加的
-     enum Style: Int {
-        case `default` = 0
-        case cancel = 1
-        case destructive = 2
+    enum Style {
+        case `default`
+        case cancel
+        case destructive
+        case custom(CustomCellProvider.Type)
+         
+         // 是否为 custom 类型
+         public var isCustom: Bool {
+             if case .custom = self { return true }
+             return false
+         }
+         
+         // 获取关联的自定义 cell 类型
+        public var customCellType: ( CustomCellProvider.Type)? {
+             if case let .custom(cellType) = self { return cellType }
+             return nil
+         }
     }
 }
 
-public extension MGAction.Style {
+extension MGAction.Style: Equatable {
+    public static func == (lhs: MGAction.Style, rhs: MGAction.Style) -> Bool {
+        switch (lhs, rhs) {
+        case (.default, .default): return true
+        case (.cancel, .cancel): return true
+        case (.destructive, .destructive): return true
+        case let (.custom(l), .custom(r)): return l == r
+        default: return false
+        }
+    }
+    
      
     /// Style 的默认样式配置， 可通过 MGAction 的 config 属性覆盖
     var config: MGActionConfig {
@@ -62,6 +86,8 @@ public extension MGAction.Style {
             MGGlobalAction.shared.cancelAction
         case .destructive:
             MGGlobalAction.shared.destructiveAction
+        case .custom(_):
+            MGGlobalAction.shared.defaultCustomAction
         }
     }
 }

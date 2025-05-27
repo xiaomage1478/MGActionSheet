@@ -1,6 +1,13 @@
 import FloatingBottomSheet
 import UIKit
-class MGActionCell: UITableViewCell {
+
+open class CustomCellProvider: MGActionCell {
+    static var reuseCellId: String {
+        return "CustomCellProvider"
+    }
+}
+
+open class MGActionCell: UITableViewCell {
     // MARK: - UI Components
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -45,12 +52,12 @@ class MGActionCell: UITableViewCell {
         setupUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Setup
-    private func setupUI() {
+    open func setupUI() {
         contentView.backgroundColor = .white
         
         // 添加视图
@@ -81,7 +88,7 @@ class MGActionCell: UITableViewCell {
     }
     
     // MARK: - Configuration
-    func config(_ data: MGAction) {
+    open func config(_ data: MGAction) {
         titleLabel.text = data.title
         subtitleLabel.text = data.subTitle
         

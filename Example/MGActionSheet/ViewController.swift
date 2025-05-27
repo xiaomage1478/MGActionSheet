@@ -6,26 +6,23 @@
 //  Copyright (c) 2024 小马哥. All rights reserved.
 //
 
-import XMGActionSheet
-import UIKit
-import SnapKit
 import FloatingBottomSheet
+import SnapKit
+import UIKit
+import XMGActionSheet
 
 public class BaseView: UIView {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupUI() {
-        
-    }
-    
+    public func setupUI() {}
 }
 
 class MGTitleView: BaseView, MGTitleViewType {
@@ -33,8 +30,7 @@ class MGTitleView: BaseView, MGTitleViewType {
     
     typealias SheetAction = () -> Void
     
-    
-    public var viewHeight: CGFloat { line.isHidden ? 70 : 76  }
+    public var viewHeight: CGFloat { line.isHidden ? 70 : 76 }
     public var closeAction: SheetAction?
     public var confirmAction: SheetAction?
     
@@ -130,7 +126,7 @@ class MGTitleView: BaseView, MGTitleViewType {
 //                self?.closeAction?()
 //            })
 //            .disposed(by: disposeBag)
-//        
+//
 //        confirmButton.rx.tap
 //            .subscribe(onNext: { [weak self] _ in
 //                self?.confirmAction?()
@@ -143,7 +139,6 @@ class MGTitleView: BaseView, MGTitleViewType {
         viewController?.dismiss(animated: true)
     }
 }
-
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -175,7 +170,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func normalStyle(_ sender: Any) {
-        let titleView  = MGTitleView().then {
+        let titleView = MGTitleView().then {
             $0.setTitle("提醒")
             $0.showBottomLine = true
             $0.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 70)
@@ -192,13 +187,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func subtitleStyle(_ sender: Any) {
-        let titleView  = MGTitleView().then {
+        let titleView = MGTitleView().then {
             $0.setTitle("提醒")
             $0.showBottomLine = true
             $0.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 70)
         }
+        
         MGActionSheetBuilder()
             .addAction(title: "拍摄", subtitle: "照片或视频", style: .default)
+            .addAction(title: "自定义选项", style: .custom(MyCustomCell.self), customParam: true)
             .addAction(title: "从手机相册选择1", style: .default)
             .addAction(title: "从手机相册选择2", style: .default)
             .addAction(title: "从手机相册选择3", style: .default)
@@ -229,12 +226,11 @@ class ViewController: UIViewController {
     
     @IBAction func actionHeight(_ sender: Any) {
         MGActionSheetBuilder()
-            .addAction(title: "退出网页版文件传输助手？", style: .default, config: MGActionConfig(titleFont: .systemFont(ofSize: 16, weight: .medium),isAutoHeight: false, actionHeight: 80), isEnable: false)
+            .addAction(title: "退出网页版文件传输助手？", style: .default, config: MGActionConfig(titleFont: .systemFont(ofSize: 16, weight: .medium), isAutoHeight: false, actionHeight: 80), isEnable: false)
             .addAction(title: "退出", style: .destructive)
             .addCancleAction()
             .build()
     }
-    
     
     @IBAction func showActionSheet(_ sender: Any) {
         MGActionSheetBuilder()
@@ -248,13 +244,12 @@ class ViewController: UIViewController {
         let vc = PresentViewController()
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .automatic
-        self.present(vc, animated:  true)
+        present(vc, animated: true)
     }
 }
 
-
-extension MGActionSheetBuilder {
-    public static func show(title: String, destructiveTitle: String, destructiveHandle: ((MGAction) -> Void)?) {
+public extension MGActionSheetBuilder {
+    static func show(title: String, destructiveTitle: String, destructiveHandle: ((MGAction) -> Void)?) {
         let titleColor = #colorLiteral(red: 0.370662272, green: 0.3664324582, blue: 0.3663428426, alpha: 1)
         let titleConfig = MGActionConfig(titleColor: titleColor, titleFont: .systemFont(ofSize: 12))
         
@@ -269,5 +264,42 @@ extension MGActionSheetBuilder {
             .addAction(title: destructiveTitle, style: .destructive, config: destructiveConfig, handler: destructiveHandle)
             .addCancleAction(config: cancelConfig)
             .build()
+    }
+}
+
+class MyCustomCell: CustomCellProvider {
+    static var reuseCellId: String { "MyCustomCell" }
+    
+    lazy var checkImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "checkmark")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .systemBlue
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.backgroundColor = .red
+        return imageView
+    }()
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
+
+    // MARK: - Setup
+
+    override func setupUI() {
+        super.setupUI()
+        contentView.addSubview(checkImageView)
+        contentView.bringSubviewToFront(checkImageView)
+        
+        checkImageView.snp.makeConstraints { make in
+            make.trailing.equalTo(-16)
+            make.centerY.equalToSuperview()
+            make.size.equalTo(CGSize(width: 20, height: 20))
+        }
+    }
+    
+    override func config(_ data: MGAction) {
+        super.config(data)
+        contentView.backgroundColor = .clear
     }
 }
