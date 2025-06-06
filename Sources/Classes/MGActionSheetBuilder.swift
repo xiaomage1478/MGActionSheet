@@ -5,6 +5,7 @@ public class MGActionSheetBuilder {
     private var bottomSheetCornerRadius: CGFloat = 10
     private var titleViewHeight: CGFloat = 0
     private var titleView: MGTitleViewType? = nil
+    private var bottomInset: CGFloat = 0
     
     public init() {}
 
@@ -64,6 +65,12 @@ public class MGActionSheetBuilder {
     }
     
     @discardableResult
+    public func setBottomInset(_ inset: CGFloat) -> MGActionSheetBuilder {
+        bottomInset = inset
+        return self
+    }
+    
+    @discardableResult
     public func setTitleView(_ view: MGTitleViewType?) -> MGActionSheetBuilder {
         titleView = view
         return self
@@ -76,6 +83,7 @@ public class MGActionSheetBuilder {
         alertController.backgroundColor = backgroundColor
         alertController.titleViewHeight = titleViewHeight
         alertController.titleView = titleView ?? MGTitleView()
+        alertController.bottomInset = bottomInset
         alertController.show()
         
         return alertController

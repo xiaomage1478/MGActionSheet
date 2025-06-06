@@ -3,9 +3,7 @@ import UIKit
 public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentable {
     public var bottomSheetCornerRadius: CGFloat = 10
     
-    public var bottomInset: CGFloat {
-        Ces.bottomSafeAreaHeight
-    }
+    public var bottomInset: CGFloat = Ces.bottomSafeAreaHeight
     
     public var bottomSheetHeight: CGFloat = 300
     
@@ -16,7 +14,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
     }
 
     public var bottomSheetInsets: NSDirectionalEdgeInsets {
-        .init(top: -0, leading: 0, bottom: Ces.bottomSafeAreaHeight, trailing: 0)
+        .init(top: -0, leading: 0, bottom: bottomInset, trailing: 0)
     }
     
     public var allowsDragToDismiss: Bool {
