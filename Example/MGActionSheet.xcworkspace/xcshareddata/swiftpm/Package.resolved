@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/OhKanghoon/FloatingBottomSheet",
       "state" : {
-        "revision" : "bbb8c85d996045d4e9557f3c270d9ba8c28905e0",
-        "version" : "2.3.0"
+        "revision" : "96a22218709860424ca0f04f2076a0712570cd9c",
+        "version" : "3.1.0"
       }
     }
   ],

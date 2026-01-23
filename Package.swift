@@ -13,7 +13,7 @@ let package = Package(
     ],
     
     dependencies: [
-        .package(url: "https://github.com/OhKanghoon/FloatingBottomSheet", from: "2.3.0"),
+        .package(url: "https://github.com/OhKanghoon/FloatingBottomSheet", from: "3.1.0"),
     ],
     
     targets: [

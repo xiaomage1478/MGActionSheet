@@ -250,7 +250,7 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				709C5BBB2DDF202D00D98AEC /* XCLocalSwiftPackageReference "../../MGActionSheet" */,
+				709C5BBB2DDF202D00D98AEC /* XCLocalSwiftPackageReference "MGActionSheet" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -290,10 +290,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MGActionSheet_Example/Pods-MGActionSheet_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FloatingBottomSheet/FloatingBottomSheet.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingBottomSheet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,7 +630,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		709C5BBB2DDF202D00D98AEC /* XCLocalSwiftPackageReference "../../MGActionSheet" */ = {
+		709C5BBB2DDF202D00D98AEC /* XCLocalSwiftPackageReference "MGActionSheet" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../MGActionSheet;
 		};

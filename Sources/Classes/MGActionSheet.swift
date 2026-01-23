@@ -1,11 +1,12 @@
 import FloatingBottomSheet
 import UIKit
 public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentable {
+    
     public var bottomSheetCornerRadius: CGFloat = 10
     
     public var bottomInset: CGFloat = Ces.bottomSafeAreaHeight
     
-    public var bottomSheetHeight: CGFloat = 300
+    public var bottomSheetHeight: any FloatingBottomSheetSizing = .fixed(300)
     
     public var titleViewHeight: CGFloat = 0
 
@@ -138,7 +139,7 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         tableViewHeightConstraint?.constant = tableView.contentSize.height
         let height = bottomInset + tableView.contentSize.height
         tableView.isScrollEnabled = height > maxHeight
-        bottomSheetHeight = min(height, maxHeight)
+        bottomSheetHeight = .fixed(min(height, maxHeight))
     }
 }
 

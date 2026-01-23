@@ -1,16 +1,29 @@
 PODS:
+  - FloatingBottomSheet (0.1.0)
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
+  - FloatingBottomSheet (from `https://github.com/OhKanghoon/FloatingBottomSheet.git`, tag `3.1.0`)
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - SnapKit
 
+EXTERNAL SOURCES:
+  FloatingBottomSheet:
+    :git: https://github.com/OhKanghoon/FloatingBottomSheet.git
+    :tag: 3.1.0
+
+CHECKOUT OPTIONS:
+  FloatingBottomSheet:
+    :git: https://github.com/OhKanghoon/FloatingBottomSheet.git
+    :tag: 3.1.0
+
 SPEC CHECKSUMS:
+  FloatingBottomSheet: 56233a54411d35ed07c07aabcb8beb77cec53775
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 94d4042e8b31c374e55ab3cb0f3457d7295a944f
+PODFILE CHECKSUM: f1553f94cd1e9a7d7674461f940bff930263115e
 
 COCOAPODS: 1.16.2

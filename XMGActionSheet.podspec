@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XMGActionSheet'
-  s.version          = '1.0.6'
+  s.version          = '2.0.0'
   s.summary          = 'MGActionSheet. 一款仿微信底部弹框，支持高度自定义'
   s.description      = <<-DESC
                        MGActionSheet. 一款仿微信底部弹框，支持高度自定义
