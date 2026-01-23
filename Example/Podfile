@@ -6,7 +6,6 @@ target 'MGActionSheet_Example' do
 #  pod 'XMGActionSheet', :path => '../'
 #  pod 'FloatingBottomSheet'
   pod 'SnapKit'
-  pod 'FloatingBottomSheet', :git => 'https://github.com/OhKanghoon/FloatingBottomSheet.git', :tag => '3.1.0'
   target 'MGActionSheet_Tests' do
     inherit! :search_paths
 

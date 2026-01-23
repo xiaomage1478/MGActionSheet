@@ -1,6 +1,0 @@
-framework module FloatingBottomSheet {
-  umbrella header "FloatingBottomSheet-umbrella.h"
-
-  export *
-  module * { export * }
-}
