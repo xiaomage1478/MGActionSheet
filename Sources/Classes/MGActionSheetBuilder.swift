@@ -2,7 +2,7 @@ import UIKit
 public class MGActionSheetBuilder {
     private var actions: [MGAction] = []
     private var backgroundColor: UIColor = MGGlobalUIConfig.shared.backgroundColor
-    private var bottomSheetCornerRadius: CGFloat = 10
+    private var bottomSheetCornerRadius: CGFloat = MGGlobalUIConfig.shared.bottomSheetCornerRadius
     private var titleViewHeight: CGFloat = 0
     private var titleView: MGTitleViewType? = nil
     private var bottomInset: CGFloat = 0

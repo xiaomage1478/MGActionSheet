@@ -146,7 +146,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         MGGlobalConfig.config { ui in
             ui.backgroundColor = .white
-            ui.cancelSeparatorColor = .blue
+            ui.separatorInset = .zero
+            ui.cellBackgroundColor = .clear
+            ui.selectionBackgroundColor = .red.withAlphaComponent(0.5)
+            ui.bottomSheetCornerRadius = 30
         } actionConfig: { action in
             action.destructiveAction = MGActionConfig(titleColor: .green, titleFont: .boldSystemFont(ofSize: 20))
         }
@@ -182,6 +185,7 @@ class ViewController: UIViewController {
             .setBackgroundColor(.white)
             .setTitleViewHeight(70)
             .setTitleView(titleView)
+            .setBottomSheetCornerRadius(10)
 //            .addCancleAction()
             .build()
     }

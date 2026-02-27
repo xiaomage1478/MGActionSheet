@@ -2,7 +2,7 @@ import FloatingBottomSheet
 import UIKit
 public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentable {
     
-    public var bottomSheetCornerRadius: CGFloat = 10
+    public var bottomSheetCornerRadius: CGFloat = MGGlobalUIConfig.shared.bottomSheetCornerRadius
     
     public var bottomInset: CGFloat = Ces.bottomSafeAreaHeight
     
@@ -74,6 +74,12 @@ public final class MGActionSheet: UIViewController, FloatingBottomSheetPresentab
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.separatorInset = .zero
+        tableView.layoutMargins = .zero
+        tableView.cellLayoutMarginsFollowReadableWidth = false
+        if #available(iOS 11.0, *) {
+            tableView.insetsContentViewsToSafeArea = false
+        }
         tableView.backgroundColor = .clear
         tableView.alwaysBounceVertical = false
         if #available(iOS 15.0, *) {
@@ -158,13 +164,11 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let action = actions[indexPath.row]
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = action.config.selectionBackgroundColor
         
         switch action.style {
         case .cancel:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellCancelID, for: indexPath) as! MGCancelActionCell
-            cell.selectedBackgroundView = backgroundView
+            cell.selectionStyle = .none
             cell.config(action)
             return cell
             
@@ -180,13 +184,12 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
                 customCell.config(action)
             }
             
-            cell.selectedBackgroundView = backgroundView
+            cell.selectionStyle = .none
             return cell
             
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellReuserID, for: indexPath) as! MGActionCell
-            cell.selectionStyle = action.isEnabled ? .default : .none
-            cell.selectedBackgroundView = backgroundView
+            cell.selectionStyle = .none
             var lastIndex = actions.count - 1
             if let cancelIndex = actions.firstIndex(where: { $0.style == .cancel }) {
                 lastIndex = cancelIndex - 1
@@ -196,6 +199,17 @@ extension MGActionSheet: UITableViewDataSource, UITableViewDelegate {
             return cell
         }
         
+    }
+
+    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let action = actions[indexPath.row]
+        guard action.isEnabled else { return }
+        tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = action.config.selectionBackgroundColor
+    }
+    
+    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let action = actions[indexPath.row]
+        tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = action.config.backgroundColor
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

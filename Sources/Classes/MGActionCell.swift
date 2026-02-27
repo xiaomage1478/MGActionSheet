@@ -45,6 +45,12 @@ open class MGActionCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
+
+    private var bottomLineLeadingConstraint: NSLayoutConstraint?
+    private var bottomLineTrailingConstraint: NSLayoutConstraint?
+    private var bottomLineBottomConstraint: NSLayoutConstraint?
+    private var bottomLineHeightConstraint: NSLayoutConstraint?
+    private var minHeightConstraint: NSLayoutConstraint?
     
     // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -59,6 +65,11 @@ open class MGActionCell: UITableViewCell {
     // MARK: - Setup
     open func setupUI() {
         contentView.backgroundColor = .white
+        preservesSuperviewLayoutMargins = false
+        separatorInset = .zero
+        layoutMargins = .zero
+        contentView.preservesSuperviewLayoutMargins = false
+        contentView.layoutMargins = .zero
         
         // 添加视图
         stackView.addArrangedSubview(titleLabel)
@@ -67,6 +78,12 @@ open class MGActionCell: UITableViewCell {
         contentView.addSubview(bottomLine)
         
         // 设置约束
+        bottomLineLeadingConstraint = bottomLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12)
+        bottomLineTrailingConstraint = bottomLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12)
+        bottomLineBottomConstraint = bottomLine.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        bottomLineHeightConstraint = bottomLine.heightAnchor.constraint(equalToConstant: 1.0 / UIScreen.main.scale)
+        minHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
+        
         NSLayoutConstraint.activate([
             // StackView 约束
             stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -77,13 +94,13 @@ open class MGActionCell: UITableViewCell {
             stackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10),
             
             // 底部线约束
-            bottomLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-            bottomLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            bottomLine.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            bottomLine.heightAnchor.constraint(equalToConstant: 1.0 / UIScreen.main.scale),
+            bottomLineLeadingConstraint!,
+            bottomLineTrailingConstraint!,
+            bottomLineBottomConstraint!,
+            bottomLineHeightConstraint!,
             
             // 确保最小高度
-            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
+            minHeightConstraint!
         ])
     }
     
@@ -102,16 +119,13 @@ open class MGActionCell: UITableViewCell {
         
         // 更新分割线样式
         bottomLine.backgroundColor = data.config.separatorColor
-        NSLayoutConstraint.deactivate(bottomLine.constraints)
-        NSLayoutConstraint.activate([
-            bottomLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: data.config.separatorInset.left),
-            bottomLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -data.config.separatorInset.right),
-            bottomLine.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -data.config.separatorInset.bottom),
-            bottomLine.heightAnchor.constraint(equalToConstant: data.config.separatorHeight)
-        ])
+        bottomLineLeadingConstraint?.constant = data.config.separatorInset.left
+        bottomLineTrailingConstraint?.constant = -data.config.separatorInset.right
+        bottomLineBottomConstraint?.constant = -data.config.separatorInset.bottom
+        bottomLineHeightConstraint?.constant = data.config.separatorHeight
         
         // 更新最小高度
-        contentView.constraints.first { $0.firstAttribute == .height }?.constant = data.config.actionMinHeight
+        minHeightConstraint?.constant = data.config.actionMinHeight
     }
 }
 
@@ -153,6 +167,9 @@ class MGCancelActionCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
+
+    private var topLineHeightConstraint: NSLayoutConstraint?
+    private var minHeightConstraint: NSLayoutConstraint?
     
     // MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -167,6 +184,11 @@ class MGCancelActionCell: UITableViewCell {
     // MARK: - Setup
     private func setupUI() {
         contentView.backgroundColor = .white
+        preservesSuperviewLayoutMargins = false
+        separatorInset = .zero
+        layoutMargins = .zero
+        contentView.preservesSuperviewLayoutMargins = false
+        contentView.layoutMargins = .zero
         
         // 添加视图
         stackView.addArrangedSubview(titleLabel)
@@ -175,12 +197,15 @@ class MGCancelActionCell: UITableViewCell {
         contentView.addSubview(stackView)
         
         // 设置约束
+        topLineHeightConstraint = topLine.heightAnchor.constraint(equalToConstant: 5)
+        minHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
+        
         NSLayoutConstraint.activate([
             // 顶部线约束
             topLine.topAnchor.constraint(equalTo: contentView.topAnchor),
             topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            topLine.heightAnchor.constraint(equalToConstant: 5),
+            topLineHeightConstraint!,
             
             // StackView 约束
             stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -190,7 +215,7 @@ class MGCancelActionCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             
             // 确保最小高度
-            contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60)
+            minHeightConstraint!
         ])
     }
     
@@ -209,16 +234,10 @@ class MGCancelActionCell: UITableViewCell {
         
         // 更新顶部线样式
         topLine.backgroundColor = data.config.cancelSeparatorColor
-        NSLayoutConstraint.deactivate(topLine.constraints)
-        NSLayoutConstraint.activate([
-            topLine.topAnchor.constraint(equalTo: contentView.topAnchor),
-            topLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            topLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            topLine.heightAnchor.constraint(equalToConstant: data.config.cancelSeparatorHeight)
-        ])
+        topLineHeightConstraint?.constant = data.config.cancelSeparatorHeight
         
         // 更新最小高度
-        contentView.constraints.first { $0.firstAttribute == .height }?.constant = data.config.actionMinHeight
+        minHeightConstraint?.constant = data.config.actionMinHeight
     }
 }
 

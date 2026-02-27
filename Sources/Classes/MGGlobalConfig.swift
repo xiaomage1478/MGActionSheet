@@ -30,6 +30,8 @@ public class MGGlobalUIConfig {
     public var spacing: CGFloat = 4
     /// 全局配置背景颜色
     public var backgroundColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    /// 全局配置 ActionSheet 圆角
+    public var bottomSheetCornerRadius: CGFloat = 10
     public var cellBackgroundColor: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     public var selectionBackgroundColor: UIColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 0.5547392384)
     

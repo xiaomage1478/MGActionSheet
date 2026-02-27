@@ -1,15 +1,14 @@
 {
-  "originHash" : "6dc906b9da8ad350b7ddbebf8bebf0cfa8cbb81b800679edd8b60dcdd764ad90",
   "pins" : [
     {
       "identity" : "floatingbottomsheet",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/OhKanghoon/FloatingBottomSheet",
       "state" : {
-        "revision" : "bbb8c85d996045d4e9557f3c270d9ba8c28905e0",
-        "version" : "2.3.0"
+        "revision" : "96a22218709860424ca0f04f2076a0712570cd9c",
+        "version" : "3.1.0"
       }
     }
   ],
-  "version" : 3
+  "version" : 2
 }
