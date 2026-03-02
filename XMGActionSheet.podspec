@@ -7,7 +7,7 @@
 #
 
   s.name             = 'XMGActionSheet'
-  s.version          = '2.1.0'
+  s.version          = '2.2.0'
   s.summary          = 'MGActionSheet. 一款仿微信底部弹框，支持高度自定义'
   s.description      = <<-DESC
                        MGActionSheet. 一款仿微信底部弹框，支持高度自定义
